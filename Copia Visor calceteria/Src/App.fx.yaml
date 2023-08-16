@@ -1,0 +1,55 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |
+        =Set(
+            varTarjetaVisible,
+            true
+        );
+        Set(
+            varRejillaVisible,
+            false
+        );
+        Set(
+            ContenedorDetalle,
+            true
+        );
+        ClearCollect(
+            OrdenesColl,
+            SortByColumns(
+                DCVCOrdeness,
+                "cr59d_day_diff",
+                SortOrder.Ascending
+            )
+        );
+        Set(valorNegro, First(Filter(semaforo, Color = "Negro")).Num_dias);
+        Set(valorRojo, First(Filter(semaforo, Color = "Rojo")).Num_dias);
+        Set(valorAmarillo, First(Filter(semaforo, Color = "Amarillo")).Num_dias);
+        
+        
+        
+        //*DatePicker1_1
+        //UpdateIf(
+        //    DCVCOrdeness;
+        //    true;
+        //    {
+        //        day_diff: DateDiff(Today() ; LookUp(DVCVFechaFinalOrden; nu_orden = nu_orden_fecha).fe_final ; TimeUnit.Days)
+        //    }
+        //);;
+        //LookUp(DVCVFechaFinalOrden;nu_orden = ThisItem.nu_orden).fe_final
+        //Set(popPapVisible;false);;
+        //Set(fechaActual;2023);;
+        //Set(fechaNueva;fechaActual - varFecha);;
+        //Notify(CountRows(TablaCometarios);NotificationType.Success)
+        //UpdateContext({varFecha: Text(Today(); "[$-es-ES]yyyy.mm.dd") });;
+        //Variable para hacer visible la rejilla
+        //Set(varRejilla;true);;
+    StartScreen: =
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

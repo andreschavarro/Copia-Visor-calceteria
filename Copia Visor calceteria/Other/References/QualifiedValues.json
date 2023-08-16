@@ -1,0 +1,71 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_cr59d_dcvcordenes_forms",
+      "Namespace": "DCVCOrdeness (Formularios)",
+      "Values": {
+        "Información": "d0545a35-abb9-4a04-9cac-e386d4fb731a"
+      }
+    },
+    {
+      "Kind": "default.cds_cr59d_dvcvfechafinalorden_forms",
+      "Namespace": "DVCVFechaFinalOrden (Formularios)",
+      "Values": {
+        "Información": "f9387940-2529-498c-85a1-e6d9ccd990ab"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "Usuarios (Formularios)",
+      "Values": {
+        "Formulario de usuario – Business": "c2413504-7eb2-4c59-a087-95d819866114",
+        "Formulario de ventana de jerarquía de usuario": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452",
+        "Información": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "Usuario": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "Usuario de la aplicación": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8"
+      }
+    },
+    {
+      "Kind": "default.cds_cr59d_maestrodummievisor_forms",
+      "Namespace": "MaestroDummieVisors (Formularios)",
+      "Values": {
+        "Información": "10056e6d-3427-4874-b3d4-d17fc629e1ac"
+      }
+    },
+    {
+      "Kind": "default.cds_cr59d_tablacometarios_forms",
+      "Namespace": "TablaComentarios (Formularios)",
+      "Values": {
+        "Información": "d5526e6d-749e-4202-a66d-2e1151d5b1a9"
+      }
+    },
+    {
+      "Kind": "default.cds_cr59d_dcvcmaestro_forms",
+      "Namespace": "DCVCMaestros (Formularios)",
+      "Values": {
+        "Información": "aeb6ad48-eaab-46e4-b9a8-dda84c746c91"
+      }
+    },
+    {
+      "Kind": "default.cds_cr59d_solicitudesappm_estadostarea_forms",
+      "Namespace": "SolicitudesAppM_EstadosTareas (Formularios)",
+      "Values": {
+        "Información": "77810a98-75c4-4d27-9ec2-8ddcec7ef561"
+      }
+    },
+    {
+      "Kind": "default.cds_cr59d_tablacometarios_forms",
+      "Namespace": "TablaCometarios (Formularios)",
+      "Values": {
+        "Información": "d5526e6d-749e-4202-a66d-2e1151d5b1a9"
+      }
+    },
+    {
+      "Kind": "default.cds_cr59d_dvcvmaestro_3_forms",
+      "Namespace": "DVCVMaestros (Formularios)",
+      "Values": {
+        "Información": "fd39dfb9-0e5c-47ef-b114-effac79dbf06"
+      }
+    }
+  ]
+}

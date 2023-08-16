@@ -1,0 +1,35 @@
+{
+  "a949e28a-fdf1-4e28-98eb-ec89dcf8c77c": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://grupocrystal.sharepoint.com/sites/Desarrollocalcetera": {
+        "dataSources": {
+          "semaforo": {
+            "tableName": "13ce1cd3-24dc-4efc-9d11-8e17ece9bc2f"
+          }
+        }
+      },
+      "https://grupocrystal-my.sharepoint.com/personal/panalit5_crystal_com_co": {
+        "dataSources": {
+          "sefamoro": {
+            "tableName": "5f69303c-bd80-4c8c-b7fd-16096f6f1e0b"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "sefamoro",
+      "semaforo"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "a949e28a-fdf1-4e28-98eb-ec89dcf8c77c"
+  }
+}

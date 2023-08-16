@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr59d_dvcvfechafinalordens",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr59d_dvcvfechafinalorden",
+    "MaxGetRowsCount": 2000,
+    "Name": "DVCVFechaFinalOrden",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Propietario",
+      "cr59d_critic": "critic",
+      "cr59d_dvcvfechafinalorden_AsyncOperations": "Trabajos del sistema",
+      "cr59d_dvcvfechafinalorden_BulkDeleteFailures": "Errores de eliminación en masa",
+      "cr59d_dvcvfechafinalorden_DuplicateBaseRecord": "Registros duplicados (cr59d_dvcvfechafinalorden_DuplicateBaseRecord)",
+      "cr59d_dvcvfechafinalorden_DuplicateMatchingRecord": "Registros duplicados (cr59d_dvcvfechafinalorden_DuplicateMatchingRecord)",
+      "cr59d_dvcvfechafinalorden_MailboxTrackingFolders": "Carpetas de seguimiento automático del buzón",
+      "cr59d_dvcvfechafinalorden_PrincipalObjectAttributeAccesses": "Uso compartido de campos",
+      "cr59d_dvcvfechafinalorden_ProcessSession": "Sesiones de proceso",
+      "cr59d_dvcvfechafinalorden_SyncErrors": "Errores de sincronización",
+      "cr59d_dvcvfechafinalordenid": "DVCVFechaFinalOrden",
+      "cr59d_fe_final": "fe_final",
+      "cr59d_name": "Name",
+      "cr59d_nu_orden": "nu_orden_fecha",
+      "createdby": "Autor",
+      "createdon": "Fecha de creación",
+      "createdonbehalfby": "Autor (delegado)",
+      "importsequencenumber": "Número de secuencia de importación",
+      "modifiedby": "Modificado por",
+      "modifiedon": "Fecha de modificación",
+      "modifiedonbehalfby": "Modificado por (delegado)",
+      "overriddencreatedon": "Fecha de creación del registro",
+      "owningbusinessunit": "Unidad de negocio propietaria",
+      "owningteam": "Equipo propietario",
+      "owninguser": "Usuario propietario",
+      "statecode": "Estado",
+      "statuscode": "Razón para el estado",
+      "timezoneruleversionnumber": "Número de versión de regla de zona horaria",
+      "utcconversiontimezonecode": "Código de zona horaria de conversión UTC",
+      "versionnumber": "Número de versión"
+    },
+    "PreferredName": "DVCVFechaFinalOrden",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DVCVFechaFinalOrden (Vistas)",
+    "Name": "_cr59d_dvcvfechafinalorden_views",
+    "RelatedEntityName": "DVCVFechaFinalOrden",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "355c754f-905c-4d68-9264-146c938f5838": "Vista de búsqueda avanzada de DVCVFechaFinalOrden",
+      "431b81c4-3102-4239-a447-afc5140b6eb9": "Vista asociada de DVCVFechaFinalOrden",
+      "81da6692-003e-4fd2-be1a-d9873eb19a9f": "DVCVFechaFinalOrden inactivo",
+      "a129f472-75dd-418d-a87f-97eb5dcd868d": "DVCVFechaFinalOrden activo",
+      "e2880b02-dd0d-4cb5-8ef1-ce23b8df3cf3": "Vista de búsqueda de DVCVFechaFinalOrden"
+    }
+  },
+  {
+    "DisplayName": "Estado (DVCVFechaFinalOrden)",
+    "Name": "cr59d_dvcvfechafinalorden_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Activo",
+      "1": "Inactivo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DVCVFechaFinalOrden"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DVCVFechaFinalOrden",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razón para el estado (DVCVFechaFinalOrden)",
+    "Name": "cr59d_dvcvfechafinalorden_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Activo",
+      "2": "Inactivo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DVCVFechaFinalOrden"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DVCVFechaFinalOrden",
+    "Type": "OptionSetInfo"
+  }
+]
