@@ -287,14 +287,13 @@
         Height: =50
         Size: =30
         Text: |-
-            =CountIf(
-                Filter(
+            =CountRows(Filter(
                     DCVCOrdeness,
                     IsBlank(Var_Desarrollador) || de_desarrollador = Var_Desarrollador,
                     IsBlank(Var_NumeroOrden) || nu_orden = Var_NumeroOrden,
                     IsBlank(Var_Recurso) || nom_recurso = Var_Recurso,
-                    IsBlank(Var_Critica) || ((Var_Critica = "Verde" && day_diff > Int(valorAmarillo)) || (Var_Critica = "Amarillo" && day_diff > Int(valorRojo) && day_diff <= Int             (valorAmarillo)) || (Var_Critica = "Rojo" && day_diff > Int(valorNegro) && day_diff <= Int(valorRojo)) || (Var_Critica = "Negro" && day_diff <= Int(valorNegro)))
-                )),true)
+                    IsBlank(Var_Critica) || ((Var_Critica = "Verde" && day_diff > Int(valorAmarillo)) || (Var_Critica = "Amarillo" && day_diff > Int(valorRojo) && day_diff <= Int  (valorAmarillo)) || (Var_Critica = "Rojo" && day_diff > Int(valorNegro) && day_diff <= Int(valorRojo)) || (Var_Critica = "Negro" && day_diff <= Int(valorNegro)))
+            ))
         Width: =90
         X: =1260
         Y: =124

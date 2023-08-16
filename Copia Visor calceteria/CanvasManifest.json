@@ -95,7 +95,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 9,
+    "BindingErrorCount": 8,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -111,13 +111,13 @@
     "Id": "f360df9a-4910-4599-8a85-a0f33f69f7de",
     "InstrumentationKey": "",
     "ManualOfflineProfileId": "",
-    "Name": "Visor calcetería",
+    "Name": "Copia Visor calcetería",
     "OriginatingVersion": "1.326",
-    "ParserErrorCount": 1,
+    "ParserErrorCount": 0,
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "Visor calcetería",
+    "AppName": "Copia Visor calcetería",
     "BackgroundColor": "rgba(128, 128, 128, 1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "",
@@ -132,6 +132,7 @@
     "Historial comentarios pantalla",
     "Notificaciones",
     "Screen2",
-    "Reporte"
+    "Reporte",
+    "Screen1"
   ]
 }
