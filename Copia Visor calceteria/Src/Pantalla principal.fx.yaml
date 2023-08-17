@@ -1117,7 +1117,7 @@
         RadiusTopRight: =4
         Visible: =varRejillaVisible
         Width: =1400
-        X: =14
+        X: =
         Y: =185
         ZIndex: =5
 
@@ -1125,7 +1125,7 @@
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =764
+            Height: =734
             Items: |+
                 =SortByColumns(
                     Filter(
@@ -1144,11 +1144,14 @@
             TemplatePadding: =0
             TemplateSize: =61
             Width: =1400
+            X: =
             Y: =58
             ZIndex: =1
 
             Title2 As label:
                 Align: =Align.Center
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
@@ -1161,14 +1164,34 @@
                 PaddingTop: =0
                 Text: =ThisItem.de_desarrollador
                 VerticalAlign: =VerticalAlign.Top
-                Width: =360
-                X: =98
-                Y: =16
+                Width: =305
+                X: =Subtitle1.X+Subtitle1.Width
+                Y: =Subtitle1.Y
+                ZIndex: =1
+
+            Separator1 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(128, 128, 128, 1)
+                Height: =2
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =59
                 ZIndex: =2
 
-            Subtitle1 As label:
+            Rectangle2 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                Height: =Parent.TemplateHeight - Separator1.Height
+                OnSelect: =Select(Parent)
+                Visible: =ThisItem.IsSelected
+                Width: =4
+                ZIndex: =3
+
+            Title2_3 As label:
                 Align: =Align.Center
-                Color: =RGBA(0, 0, 0, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
@@ -1178,50 +1201,12 @@
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =12
-                Text: =ThisItem.nu_orden
-                VerticalAlign: =VerticalAlign.Top
-                Width: =59
-                X: =24
-                Y: =16
-                ZIndex: =3
-
-            Separator1 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                Fill: =RGBA(128, 128, 128, 1)
-                Height: =2
-                OnSelect: =Select(Parent)
-                Width: =Parent.TemplateWidth
-                Y: =59
-                ZIndex: =5
-
-            Rectangle2 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                Height: =Parent.TemplateHeight - Separator1.Height
-                OnSelect: =Select(Parent)
-                Visible: =ThisItem.IsSelected
-                Width: =4
-                ZIndex: =6
-
-            Title2_3 As label:
-                Align: =Align.Center
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =25
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
                 Text: =ThisItem.centro_proceso
                 VerticalAlign: =VerticalAlign.Top
-                Width: =144
-                X: =467
-                Y: =16
-                ZIndex: =9
+                Width: =Label9_4.Width
+                X: =Title2.X+Title2.Width
+                Y: =Title2.Y
+                ZIndex: =4
 
             DatePicker1_1 As datepicker:
                 BorderColor: =RGBA(166, 166, 166, 1)
@@ -1257,7 +1242,7 @@
                         ),
                         FontWeight.Lighter,
                         FontWeight.Bold)
-                Height: =30
+                Height: =25
                 HoverDateFill: =RGBA(200, 200, 200, 1)
                 IconBackground: =RGBA(66, 75, 90, 100)
                 IsEditable: =true
@@ -1269,10 +1254,10 @@
                 SelectedDateFill: =RGBA(0, 120, 212, 1)
                 Size: =13
                 Tooltip: =
-                Width: =183
-                X: =1145
-                Y: =16
-                ZIndex: =11
+                Width: =Label9_3.Width
+                X: =1216
+                Y: =17
+                ZIndex: =5
 
             Icon6_1 As icon.Send:
                 BorderColor: =RGBA(66, 75, 90, 1)
@@ -1281,7 +1266,7 @@
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
-                Height: =30
+                Height: =25
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =
                 HoverFill: =RGBA(0, 0, 0, 0)
@@ -1325,14 +1310,13 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =30
-                X: =1345
-                Y: =16
-                ZIndex: =12
+                Width: =Icon7.Width
+                X: =1355
+                Y: =17
+                ZIndex: =6
 
             Label13 As label:
                 Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
@@ -1344,14 +1328,13 @@
                 OnSelect: =Select(Parent)
                 Size: =13
                 Text: =CountIf(DCVCOrdeness, nom_recurso = ThisItem.nom_recurso)
-                Width: =35
-                X: =1084
-                Y: =16
-                ZIndex: =15
+                Width: =Label9_7.Width
+                X: =Label11.X+Label11.Width
+                Y: =15
+                ZIndex: =7
 
             Label11 As label:
                 Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
@@ -1380,13 +1363,15 @@
                             day_diff
                         ) 
                     )
-                Width: =120
-                X: =940
+                Width: =Label9_6.Width
+                X: =Title2_4.X+Title2_4.Width
                 Y: =15
-                ZIndex: =16
+                ZIndex: =8
 
             Title2_4 As label:
                 Align: =Align.Center
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
@@ -1417,10 +1402,49 @@
                         )
                     )
                 VerticalAlign: =VerticalAlign.Top
-                Width: =320
-                X: =620
-                Y: =16
-                ZIndex: =17
+                Width: =Label9_5.Width
+                X: =Title2_3.X+Title2_3.Width
+                Y: =Title2_3.Y
+                ZIndex: =9
+
+            Subtitle1 As label:
+                Align: =Align.Center
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =26
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: =ThisItem.nu_orden
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Label9.Width
+                X: =Label9.X
+                Y: =15
+                ZIndex: =10
+
+        Label9_2 As label:
+            Align: =Align.Center
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Size: =13
+            Text: ="Desarrollador"
+            Width: =311
+            X: =Label9.X+Label9.Width
+            Y: =18
+            ZIndex: =2
 
         Icon7 As icon.CollapseView:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -1441,46 +1465,12 @@
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =45
-            X: =1348
-            Y: =5
-            ZIndex: =2
-
-        Label9 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Size: =13
-            Text: ="No. solicitud"
-            X: =11
-            Y: =18
+            X: =1355
+            Y: =
             ZIndex: =3
-
-        Label9_2 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Size: =13
-            Text: ="Desarrollador"
-            X: =206
-            Y: =18
-            ZIndex: =4
 
         Label9_3 As label:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -1489,15 +1479,16 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
+            Height: =41
             Size: =13
             Text: ="Fecha"
-            X: =1167
-            Y: =17
-            ZIndex: =5
+            Width: =139
+            X: =Label9_7.X+Label9_7.Width
+            Y: =16
+            ZIndex: =4
 
         Label9_4 As label:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -1506,12 +1497,13 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
+            Height: =39
             Size: =13
             Text: ="Proceso"
-            Width: =84
-            X: =497
+            Width: =214
+            X: =Label9_2.X+Label9_2.Width
             Y: =18
-            ZIndex: =6
+            ZIndex: =5
 
         Rectangle5 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1525,11 +1517,10 @@
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =1400
             Y: =57
-            ZIndex: =7
+            ZIndex: =6
 
         Label9_5 As label:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -1538,16 +1529,16 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
+            Height: =41
             Size: =13
             Text: ="Recurso"
-            Width: =84
-            X: =731
+            Width: =257
+            X: =Label9_4.X+Label9_4.Width
             Y: =17
-            ZIndex: =8
+            ZIndex: =7
 
         Label9_6 As label:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -1556,16 +1547,33 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
+            Height: =41
             Size: =13
             Text: ="Última Fecha"
-            Width: =84
-            X: =958
+            Width: =159
+            X: =Label9_5.X+Label9_5.Width
             Y: =17
-            ZIndex: =9
+            ZIndex: =8
 
         Label9_7 As label:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =41
+            Size: =13
+            Text: ="Solicitudes recurso"
+            Width: =119
+            X: =Label9_6.X+Label9_6.Width
+            Y: =17
+            ZIndex: =9
+
+        Label9 As label:
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -1575,10 +1583,10 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
             Size: =13
-            Text: ="Solicitudes recurso"
-            Width: =110
-            X: =1051
-            Y: =17
+            Text: ="No. solicitud"
+            Width: =149
+            X: =-Slider1.Value*3
+            Y: =18
             ZIndex: =10
 
     Label10_1 As label:
@@ -4248,4 +4256,26 @@
         X: =956
         Y: =12
         ZIndex: =11
+
+    Slider1 As slider:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Default: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HandleActiveFill: =RGBA(255, 255, 255, 1)
+        HandleFill: =RGBA(255, 255, 255, 1)
+        HandleHoverFill: =RGBA(255, 255, 255, 1)
+        Height: =33
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        Min: =1
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        RailFill: =RGBA(200, 200, 200, 1)
+        RailHoverFill: =ColorFade(RGBA(0, 120, 212, 1), 80%)
+        ValueFill: =RGBA(102, 102, 102, 1)
+        ValueHoverFill: =RGBA(0, 120, 212, 1)
+        Width: =1440
+        Y: =976
+        ZIndex: =12
 
