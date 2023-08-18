@@ -1145,7 +1145,7 @@
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =734
+            Height: =748
             Items: |+
                 =SortByColumns(
                     Filter(
@@ -1162,9 +1162,9 @@
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
-            TemplateSize: =61
+            TemplateSize: =60
             Width: =1400
-            Y: =69
+            Y: =55
             ZIndex: =1
 
             Title2_1 As label:

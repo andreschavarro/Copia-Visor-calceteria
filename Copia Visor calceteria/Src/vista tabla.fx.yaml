@@ -1,24 +1,25 @@
 "'vista tabla' As screen":
+    ImagePosition: =ImagePosition.Fill
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     DataTable2 As dataTable.datatable:
-        BorderColor: =RGBA(102, 174, 229, 1)
+        BorderColor: =RGBA(0, 42, 74, 1)
         BorderStyle: =BorderStyle.Solid
-        BorderThickness: =2
+        BorderThickness: =3
         Color: =RGBA(51, 51, 51, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisplayMode: =DisplayMode.Edit
-        Fill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(255, 255, 255, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         HeadingColor: =RGBA(255, 255, 255, 1)
-        HeadingFill: =RGBA(0, 120, 212, 1)
+        HeadingFill: =RGBA(0, 60, 106, 1)
         HeadingFont: =Font.'Segoe UI'
         HeadingFontWeight: =FontWeight.Normal
         HeadingSize: =13
-        Height: =509
+        Height: =481
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(0, 120, 212, 1)
+        HoverFill: =RGBA(102, 138, 166, 1)
         InputFill: =RGBA(255, 255, 255, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
         Items: |-
@@ -39,11 +40,11 @@
         PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PrimaryColor3: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         SelectedColor: =RGBA(51, 51, 51, 1)
-        SelectedFill: =RGBA(0, 120, 212, .2)
+        SelectedFill: =RGBA(128, 128, 128, 1)
         Size: =13
-        Width: =956
-        X: =172
-        Y: =240
+        Width: =1017
+        X: =164
+        Y: =262
         ZIndex: =1
 
         nu_orden_Columna1 As dataTableColumn.textualColumn:
@@ -112,13 +113,13 @@
             LayoutHeight: =Parent.Height
             Order: =8
             Text: =ThisItem.nom_recurso
-            Width: =316
-            X: =683
+            Width: =248
+            X: =692
             Y: =0
             ZIndex: =8
 
         day_diff_Columna1 As dataTableColumn.numberColumn:
-            AutoWidth: =true
+            AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Ultima fecha"
             FieldName: ="cr59d_day_diff"
@@ -145,27 +146,24 @@
                         day_diff
                     ) 
                 )
-            Width: =100
+            Width: =128
             X: =796
             Y: =0
             ZIndex: =9
 
-        "'Número de versión_Columna1' As dataTableColumn.numberColumn":
-            AutoWidth: =true
+        num_recursos_Columna1 As dataTableColumn.numberColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Número de versión"
-            FieldName: ="versionnumber"
+            FieldDisplayName: ="Numeros de solicitudes"
+            FieldName: ="new_num_recursos"
             FieldVariantName: ="numberColumn"
             Height: =Parent.Height
-            IsHyperlink: =true
             LayoutHeight: =Parent.Height
             Order: =10
-            Text: =CountIf(DCVCOrdeness,nom_recurso=ThisItem.nom_recurso)
-            Visible: =true
+            Text: =CountIf(DCVCOrdeness, nom_recurso = ThisItem.nom_recurso)
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =10
+            ZIndex: =11
 
     "'Naviation Center_3' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -265,6 +263,7 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
+        OnSelect: =Navigate('Pantalla principal_1')
         Size: =13
         Text: ="Visualizador de Ordenes "
         Width: =217
