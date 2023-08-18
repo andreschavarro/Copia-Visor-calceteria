@@ -1,4 +1,7 @@
 Screen2 As screen:
+    BackgroundImage: =
+    Height: =
+    ImagePosition: =ImagePosition.Fill
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -11,8 +14,8 @@ Screen2 As screen:
         TemplatePadding: =0
         TemplateSize: =130
         Width: =382
-        X: =244
-        Y: =104
+        X: =147
+        Y: =309
         ZIndex: =1
 
         Title4 As label:

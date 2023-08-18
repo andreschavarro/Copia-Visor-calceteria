@@ -161,10 +161,11 @@
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(66, 75, 90, 1)
             FocusedBorderThickness: =4
-            Height: =64
+            Height: =63
             HoverFill: =
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =1440
+            Y: =2
             ZIndex: =1
 
         Label1_5 As label:
@@ -272,6 +273,25 @@
             X: =18
             Y: =2
             ZIndex: =9
+
+        Label1_12 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Navigate('vista tabla')
+            Size: =13
+            Text: ="Vista Tabla"
+            Width: =126
+            X: =833
+            Y: =13
+            ZIndex: =10
 
     Label10_3 As label:
         Align: =Align.Center
@@ -1144,8 +1164,7 @@
             TemplatePadding: =0
             TemplateSize: =61
             Width: =1400
-            X: =
-            Y: =58
+            Y: =69
             ZIndex: =1
 
             Title2_1 As label:
@@ -4274,6 +4293,6 @@
         ValueFill: =RGBA(102, 102, 102, 1)
         ValueHoverFill: =RGBA(0, 120, 212, 1)
         Width: =1440
-        Y: =976
+        Y: =991
         ZIndex: =12
 

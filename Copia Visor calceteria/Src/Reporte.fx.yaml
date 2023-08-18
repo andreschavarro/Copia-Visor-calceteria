@@ -129,6 +129,25 @@ Reporte As screen:
             Y: =1
             ZIndex: =7
 
+        Label1_13 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Navigate('vista tabla')
+            Size: =13
+            Text: ="Vista Tabla"
+            Width: =126
+            X: =835
+            Y: =12
+            ZIndex: =8
+
     PowerBI1 As powerbi:
         BorderColor: =RGBA(166, 166, 166, 1)
         Height: =707
