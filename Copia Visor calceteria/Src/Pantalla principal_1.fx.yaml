@@ -253,8 +253,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =60
-            X: =18
-            Y: =2
+            Y: =5
             ZIndex: =9
 
     Label10_3 As label:

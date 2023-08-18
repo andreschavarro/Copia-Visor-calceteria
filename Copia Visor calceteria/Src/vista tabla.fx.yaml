@@ -1,6 +1,8 @@
 "'vista tabla' As screen":
+    Height: =1024
     ImagePosition: =ImagePosition.Fill
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    Width: =1440
 
     DataTable2 As dataTable.datatable:
         BorderColor: =RGBA(0, 42, 74, 1)
@@ -256,10 +258,10 @@
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(66, 75, 90, 1)
         FocusedBorderThickness: =4
-        Height: =64
+        Height: =67
         HoverFill: =
         PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =1366
+        Width: =1438
         ZIndex: =2
 
     Image6_3 As image:
