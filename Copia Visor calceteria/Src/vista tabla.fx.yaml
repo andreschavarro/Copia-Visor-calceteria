@@ -17,7 +17,7 @@
         HeadingFont: =Font.'Segoe UI'
         HeadingFontWeight: =FontWeight.Normal
         HeadingSize: =13
-        Height: =481
+        Height: =527
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(102, 138, 166, 1)
         InputFill: =RGBA(255, 255, 255, 1)
@@ -26,10 +26,10 @@
             =SortByColumns(
                 Filter(
                     DCVCOrdeness,
-                    IsBlank(Var_Desarrollador) || de_desarrollador = Var_Desarrollador,
-                    IsBlank(Var_NumeroOrden) || nu_orden = Var_NumeroOrden,
-                    IsBlank(Var_Recurso) || nom_recurso = Var_Recurso,
-                    IsBlank(Var_Critica) || ((Var_Critica = "Verde" && day_diff > Int(valorAmarillo)) || (Var_Critica = "Amarillo" && day_diff > Int(valorRojo) && day_diff <= Int(valorAmarillo)) || (Var_Critica = "Rojo" && day_diff > Int(valorNegro) && day_diff <= Int(valorRojo)) || (Var_Critica = "Negro" && day_diff <= Int(valorNegro)))
+                    IsBlank(Var_Desarrollador2) || de_desarrollador = Var_Desarrollador2,
+                    IsBlank(Var_NumeroOrden2) || nu_orden = Var_NumeroOrden2,
+                    IsBlank(Var_Recurso2) || nom_recurso = Var_Recurso2,
+                    IsBlank(Var_Critica2) || ((Var_Critica2 = "Verde" && day_diff > Int(valorAmarillo)) || (Var_Critica2 = "Amarillo" && day_diff > Int(valorRojo) && day_diff <= Int(valorAmarillo)) || (Var_Critica2 = "Rojo" && day_diff > Int(valorNegro) && day_diff <= Int(valorRojo)) || (Var_Critica2 = "Negro" && day_diff <= Int(valorNegro)))
                 ),
                 "cr59d_day_diff",
                 SortOrder.Ascending
@@ -42,14 +42,14 @@
         SelectedColor: =RGBA(51, 51, 51, 1)
         SelectedFill: =RGBA(128, 128, 128, 1)
         Size: =13
-        Width: =1017
-        X: =164
-        Y: =262
+        Width: =1008
+        X: =201
+        Y: =215
         ZIndex: =1
 
         nu_orden_Columna1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="nu_orden"
+            FieldDisplayName: ="ORDEN"
             FieldName: ="cr59d_nu_orden"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
@@ -63,12 +63,12 @@
 
         de_desarrollador_Columna2 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="de_desarrollador"
+            FieldDisplayName: ="DESARROLLADOR"
             FieldName: ="cr59d_de_desarrollador"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            Order: =4
+            Order: =6
             Text: =ThisItem.de_desarrollador
             Width: =100
             X: =0
@@ -77,7 +77,7 @@
 
         de_cliente_Columna2 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="de_cliente"
+            FieldDisplayName: ="CLIENTE"
             FieldName: ="cr59d_de_cliente"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
@@ -91,12 +91,12 @@
 
         centro_proceso_Columna2 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="centro_proceso"
+            FieldDisplayName: ="CENTRO PEOCESO"
             FieldName: ="cr59d_centro_proceso"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            Order: =6
+            Order: =9
             Text: =ThisItem.centro_proceso
             Width: =100
             X: =0
@@ -106,12 +106,12 @@
         nom_recurso_Columna2 As dataTableColumn.textualColumn:
             AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="nom_recurso"
+            FieldDisplayName: ="RECURSO"
             FieldName: ="cr59d_nom_recurso"
             FieldVariantName: ="textualColumn"
             Height: =509
             LayoutHeight: =Parent.Height
-            Order: =8
+            Order: =11
             Text: =ThisItem.nom_recurso
             Width: =248
             X: =692
@@ -127,7 +127,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: =false
-            Order: =9
+            Order: =14
             Text: |-
                 =If(
                     CountIf(
@@ -158,12 +158,96 @@
             FieldVariantName: ="numberColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            Order: =10
+            Order: =15
             Text: =CountIf(DCVCOrdeness, nom_recurso = ThisItem.nom_recurso)
             Width: =100
             X: =0
             Y: =0
             ZIndex: =11
+
+        de_ejecutiva_Columna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="EJECUTIVA"
+            FieldName: ="cr59d_de_ejecutiva"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =8
+            Text: =ThisItem.de_ejecutiva
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =12
+
+        grupo_proceso_Columna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="GRUPO PROCESO"
+            FieldName: ="cr59d_grupo_proceso"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =10
+            Text: =ThisItem.grupo_proceso
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =13
+
+        dias_registro_Columna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="DIAS DEL REGISTRO"
+            FieldName: ="cr59d_dias_registro"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =12
+            Text: =ThisItem.dias_registro
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =14
+
+        tipo_muestra_Columna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="TIPO MUESTRAS"
+            FieldName: ="cr59d_tipo_muestra"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =13
+            Text: =ThisItem.tipo_muestra
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =15
+
+        cantidad_colores_Columna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="COLORES"
+            FieldName: ="cr59d_cantidad_colores"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.cantidad_colores
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =16
+
+        AGUJAS_Columna1 As dataTableColumn.numberColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="AGUJAS"
+            FieldName: ="new_agujas"
+            FieldVariantName: ="numberColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =12
+            Text: =ThisItem.AGUJAS
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =17
 
     "'Naviation Center_3' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -301,8 +385,8 @@
     "'Contenedor Combox filtros_2' As groupContainer.manualLayoutContainer":
         BorderColor: =RGBA(255, 255, 255, 1)
         BorderStyle: =BorderStyle.None
-        Height: =68
-        Width: =1109
+        Height: =72
+        Width: =1075
         X: =18
         Y: =88
         ZIndex: =9
@@ -322,8 +406,8 @@
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
-            OnChange: =Set(Var_NumeroOrden,InputNoOrden_2.Text)
-            OnSelect: =Set(Var_NumeroOrden,InputNoOrden_2.Text)
+            OnChange: =Set(Var_NumeroOrden2,InputNoOrden_2.Text)
+            OnSelect: =Set(Var_NumeroOrden2,InputNoOrden_2.Text)
             PressedBorderColor: =RGBA(0, 120, 212, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
@@ -333,7 +417,7 @@
             RadiusTopRight: =0
             Size: =13
             Width: =200
-            X: =408
+            X: =416
             Y: =20
             ZIndex: =3
 
@@ -356,8 +440,8 @@
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Crítica"
             Items: =["Verde" , "Amarillo" , "Rojo" , "Negro"]
-            OnChange: =Set(Var_Critica,ComboBoxCritica_2.Selected.Value)
-            OnSelect: =Set(Var_Critica,ComboBoxCritica_2.Selected.Value)
+            OnChange: =Set(Var_Critica2,ComboBoxCritica_2.Selected.Value)
+            OnSelect: =Set(Var_Critica2,ComboBoxCritica_2.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
@@ -367,7 +451,7 @@
             SelectMultiple: =false
             Size: =13
             Width: =100
-            X: =650
+            X: =648
             Y: =20
             ZIndex: =4
 
@@ -390,8 +474,8 @@
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Desarrollador"
             Items: =Distinct(DCVCOrdeness,de_desarrollador)
-            OnChange: =Set(Var_Desarrollador,ComboBoxDesarrollador_2.Selected.Value)
-            OnSelect: =Set(Var_Desarrollador,ComboBoxDesarrollador_2.Selected.Value)
+            OnChange: =Set(Var_Desarrollador2,ComboBoxDesarrollador_2.Selected.Value)
+            OnSelect: =Set(Var_Desarrollador2,ComboBoxDesarrollador_2.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
@@ -400,7 +484,7 @@
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
             Size: =13
-            Width: =350
+            Width: =371
             Y: =20
             ZIndex: =9
 
@@ -423,8 +507,8 @@
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Recurso"
             Items: =Distinct(DCVCOrdeness,nom_recurso)
-            OnChange: =Set(Var_Recurso,ComboBoxRecurso_2.Selected.Value)
-            OnSelect: =Set(Var_Recurso,ComboBoxRecurso_2.Selected.Value)
+            OnChange: =Set(Var_Recurso2,ComboBoxRecurso_2.Selected.Value)
+            OnSelect: =Set(Var_Recurso2,ComboBoxRecurso_2.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
@@ -433,7 +517,7 @@
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
             Size: =13
-            Width: =320
+            Width: =280
             X: =784
             Y: =20
             ZIndex: =10
@@ -442,8 +526,8 @@
         BorderColor: =RGBA(255, 255, 255, 1)
         BorderStyle: =BorderStyle.None
         Height: =148
-        Width: =238
-        X: =1128
+        Width: =273
+        X: =1093
         Y: =67
         ZIndex: =13
 
@@ -458,9 +542,10 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =53
+            Height: =55
+            Size: =13
             Text: ="Cantidad de ordenes actuales"
-            Width: =198
+            Width: =264
             ZIndex: =1
 
         Button1_2 As button:
@@ -545,10 +630,10 @@
             Text: |-
                 =CountRows(Filter(
                         DCVCOrdeness,
-                        IsBlank(Var_Desarrollador) || de_desarrollador = Var_Desarrollador,
-                        IsBlank(Var_NumeroOrden) || nu_orden = Var_NumeroOrden,
-                        IsBlank(Var_Recurso) || nom_recurso = Var_Recurso,
-                        IsBlank(Var_Critica) || ((Var_Critica = "Verde" && day_diff > Int(valorAmarillo)) || (Var_Critica = "Amarillo" && day_diff > Int(valorRojo) && day_diff <= Int  (valorAmarillo)) || (Var_Critica = "Rojo" && day_diff > Int(valorNegro) && day_diff <= Int(valorRojo)) || (Var_Critica = "Negro" && day_diff <= Int(valorNegro)))
+                        IsBlank(Var_Desarrollador2) || de_desarrollador = Var_Desarrollador2,
+                        IsBlank(Var_NumeroOrden2) || nu_orden = Var_NumeroOrden2,
+                        IsBlank(Var_Recurso2) || nom_recurso = Var_Recurso2,
+                        IsBlank(Var_Critica2) || ((Var_Critica2 = "Verde" && day_diff > Int(valorAmarillo)) || (Var_Critica2 = "Amarillo" && day_diff > Int(valorRojo) && day_diff <= Int  (valorAmarillo)) || (Var_Critica2 = "Rojo" && day_diff > Int(valorNegro) && day_diff <= Int(valorRojo)) || (Var_Critica2 = "Negro" && day_diff <= Int(valorNegro)))
                 ))
             Width: =90
             X: =108
