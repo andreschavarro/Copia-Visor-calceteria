@@ -5,7 +5,7 @@ Screen2 As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     Width: =1440
 
-    "'Contenedor Combox filtros_4' As groupContainer.manualLayoutContainer":
+    "'Contenedor header' As groupContainer.manualLayoutContainer":
         BorderColor: =RGBA(255, 255, 255, 1)
         BorderStyle: =BorderStyle.None
         Fill: =RGBA(66, 75, 90, 1)
@@ -174,4 +174,45 @@ Screen2 As screen:
             X: =1262
             Y: =26
             ZIndex: =8
+
+    "'Contenedor footer' As groupContainer.manualLayoutContainer":
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(66, 75, 90, 1)
+        Height: =88
+        Width: =1440
+        Y: =936
+        ZIndex: =2
+
+        Image6_5 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =84
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='MicrosoftTeams-image (1)'
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =70
+            X: =1362
+            ZIndex: =1
+
+    Container2 As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =537
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowX: =LayoutOverflow.Scroll
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        LayoutWrap: =true
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1440
+        Y: =338
+        ZIndex: =3
 
