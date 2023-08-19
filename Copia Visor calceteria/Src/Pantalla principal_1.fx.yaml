@@ -129,6 +129,7 @@
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Recurso"
+            IsSearchable: =false
             Items: =Distinct(DCVCOrdeness,nom_recurso)
             OnChange: =Set(Var_Recurso,ComboBoxRecurso_1.Selected.Value)
             OnSelect: =Set(Var_Recurso,ComboBoxRecurso_1.Selected.Value)
@@ -136,7 +137,7 @@
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
-            SearchItems: =Search(Distinct(DCVCOrdeness,nom_recurso),ComboBoxRecurso_1.SearchText,"Value")
+            SearchItems: =[]
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
             Size: =13
@@ -553,10 +554,6 @@
                             ThisItem.nu_orden
                         );
                         Set(
-                            varFecha,
-                            ThisItem.fecha_fin_original
-                        );
-                        Set(
                             varEstado,
                             ThisItem.centro_proceso
                         );
@@ -571,10 +568,6 @@
                         Set(
                             varCodigoMuestra,
                             ThisItem.co_muestra
-                        );
-                        Set(
-                            varDescripcion,
-                            ThisItem.descripcion_desarrollo
                         );
                         Set(
                             varRecurso,
@@ -3767,7 +3760,7 @@
                 Font: =Font.'Segoe UI'
                 Height: =45
                 Size: =15
-                Text: =varDescripcion
+                Text: =
                 Width: =518
                 X: =28
                 Y: =297

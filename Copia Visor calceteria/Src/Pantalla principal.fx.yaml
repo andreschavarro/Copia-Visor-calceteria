@@ -531,10 +531,6 @@
                             ThisItem.nu_orden
                         );
                         Set(
-                            varFecha,
-                            ThisItem.fecha_fin_original
-                        );
-                        Set(
                             varEstado,
                             ThisItem.centro_proceso
                         );
@@ -549,10 +545,6 @@
                         Set(
                             varCodigoMuestra,
                             ThisItem.co_muestra
-                        );
-                        Set(
-                            varDescripcion,
-                            ThisItem.descripcion_desarrollo
                         );
                         Set(
                             varRecurso,
@@ -3707,7 +3699,7 @@
                 Font: =Font.'Segoe UI'
                 Height: =45
                 Size: =15
-                Text: =varDescripcion
+                Text: =
                 Width: =518
                 X: =28
                 Y: =297
