@@ -8823,36 +8823,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Pantalla principal'.'Contenedor galeria rejilla'.Gallery3.Icon6_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Pantalla principal'.'Contenedor galeria rejilla'.Gallery3.Icon6_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Pantalla principal",
-                "type": "'Pantalla principal'.'Contenedor galeria rejilla'.Gallery3.Icon6_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Pantalla principal'.'Contenedor galeria rejilla'.Gallery3.Icon6_1.TabIndex"
                 }
               ],
@@ -8877,6 +8847,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Pantalla principal'.'Contenedor galeria rejilla'.Gallery3.Icon6_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Pantalla principal'.'Contenedor galeria rejilla'.Gallery3.Icon6_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Pantalla principal",
+                "type": "'Pantalla principal'.'Contenedor galeria rejilla'.Gallery3.Icon6_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
