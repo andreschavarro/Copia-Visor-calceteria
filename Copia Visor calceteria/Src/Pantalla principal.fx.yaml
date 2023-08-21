@@ -1023,17 +1023,12 @@
                     Size: =10
                     Text: |-
                         =If(
-                            IsBlank(
-                                LookUp(
-                                    DVCVFechaFinalOrden,
-                                    nu_orden_fecha = ThisItem.nu_orden
-                                ).fe_final
-                            ),
+                            IsBlank(ThisItem.fe_final),
                             "No hay fecha",
-                            Text(LookUp(
-                                DVCVFechaFinalOrden,
-                                nu_orden_fecha = ThisItem.nu_orden
-                            ).fe_final,DateTimeFormat.ShortDate)
+                            Text(
+                                ThisItem.fe_final,
+                                DateTimeFormat.ShortDate
+                            )
                         )
                     Width: =144
                     X: =24
