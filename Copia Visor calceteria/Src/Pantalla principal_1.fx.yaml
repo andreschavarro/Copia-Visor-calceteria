@@ -1046,17 +1046,12 @@
                     Size: =10
                     Text: |-
                         =If(
-                            IsBlank(
-                                LookUp(
-                                    DVCVFechaFinalOrden,
-                                    nu_orden_fecha = ThisItem.nu_orden
-                                ).fe_final
-                            ),
+                            IsBlank(ThisItem.fe_final),
                             "No hay fecha",
-                            Text(LookUp(
-                                DVCVFechaFinalOrden,
-                                nu_orden_fecha = ThisItem.nu_orden
-                            ).fe_final,DateTimeFormat.ShortDate)
+                            Text(
+                                ThisItem.fe_final,
+                                DateTimeFormat.ShortDate
+                            )
                         )
                     Width: =144
                     X: =24
@@ -1159,7 +1154,7 @@
             TemplatePadding: =0
             TemplateSize: =62
             Width: =1400
-            Y: =70
+            Y: =71
             ZIndex: =1
 
             Title2_1 As label:
@@ -1226,22 +1221,12 @@
                 BorderColor: =RGBA(166, 166, 166, 1)
                 CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 Color: =RGBA(51, 51, 51, 1)
-                DefaultDate: |+
+                DefaultDate: |
                     =If(
-                        IsBlank(
-                            LookUp(
-                                DVCVFechaFinalOrden,
-                                nu_orden_fecha = ThisItem.nu_orden
-                            ).fe_final
-                        ),
+                        IsBlank(ThisItem.fe_final),
                         "",
-                         LookUp(
-                            DVCVFechaFinalOrden,
-                            nu_orden_fecha = ThisItem.nu_orden
-                        ).fe_final
+                        ThisItem.fe_final
                     )
-                    
-                    
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1249,14 +1234,10 @@
                 FontWeight: |-
                     =If(
                         IsBlank(
-                            LookUp(
-                                DVCVFechaFinalOrden,
-                                nu_orden_fecha = ThisItem.nu_orden
-                            ).fe_final
+                            ThisItem.fe_final
                         ),
                         FontWeight.Lighter,
                         FontWeight.Bold)
-                Height: =25
                 HoverDateFill: =RGBA(200, 200, 200, 1)
                 IconBackground: =RGBA(66, 75, 90, 100)
                 IsEditable: =true
@@ -1270,7 +1251,6 @@
                 Tooltip: =
                 Width: =Label9_8.Width
                 X: =Label13_1.X+Label13_1.Width
-                Y: =17
                 ZIndex: =5
 
             Icon6_3 As icon.Send:
@@ -1287,40 +1267,24 @@
                 Icon: =Icon.Save
                 OnSelect: |-
                     =Patch(
-                        DVCVFechaFinalOrden,
-                        If(
-                            !IsBlank(
-                                LookUp(
-                                    DVCVFechaFinalOrden,
-                                    nu_orden_fecha = ThisItem.nu_orden
-                                )
-                            ),
-                            LookUp(
-                                DVCVFechaFinalOrden,
-                                nu_orden_fecha = ThisItem.nu_orden
-                            ),
-                            Defaults(DVCVFechaFinalOrden)
+                        DCVCOrdeness,
+                        LookUp(
+                            DCVCOrdeness,
+                            nu_orden = ThisItem.nu_orden
                         ),
                         {
-                            Name: "1",
-                            nu_orden_fecha: ThisItem.nu_orden,
-                            fe_final: DatePicker1_1.SelectedDate
+                            fe_final: DatePicker1_1.SelectedDate,
+                            day_diff: DateDiff(
+                                Today(),
+                                DatePicker1_1.SelectedDate,
+                                TimeUnit.Days
+                            )
                         }
+                    );
+                    Notify(
+                        "Fecha actualizada",
+                        NotificationType.Success
                     )
-                    ;
-                    Patch(
-                        DCVCOrdeness,
-                            LookUp(
-                                DCVCOrdeness,
-                                nu_orden = ThisItem.nu_orden
-                            ),
-                        {
-                            day_diff: DateDiff(Today() , DatePicker1_1.SelectedDate , TimeUnit.Days)
-                            
-                        }
-                    )
-                    ;
-                    Notify("Fecha actualizada", NotificationType.Success)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
@@ -3900,17 +3864,9 @@
                 Size: =13
                 Text: |-
                     =If(
-                        IsBlank(
-                            LookUp(
-                                DVCVFechaFinalOrden,
-                                nu_orden_fecha = varOrden
-                            ).fe_final
-                        ),
+                        IsBlank(varFechaFinal),
                         "No hay fecha",
-                        LookUp(
-                            DVCVFechaFinalOrden,
-                            nu_orden_fecha = varOrden
-                        ).fe_final
+                        varFechaFinal
                     )
                 Width: =160
                 X: =211

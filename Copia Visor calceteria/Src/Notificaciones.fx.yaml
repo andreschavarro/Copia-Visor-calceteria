@@ -240,7 +240,7 @@ Notificaciones As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Size: =13
-        Text: =Text(First(DVCVFechaFinalOrden).fe_final , "dd/mm/yyyy")
+        Text: =Text(First(DCVCOrdeness).fe_final , "dd/mm/yyyy")
         X: =782
         Y: =408
         ZIndex: =15
