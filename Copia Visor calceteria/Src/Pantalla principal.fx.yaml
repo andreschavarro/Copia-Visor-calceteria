@@ -4126,7 +4126,7 @@
                     semaforo,
                     LookUp(
                         semaforo,
-                        Color = "Negro"
+                        Color = "Negro" 
                     ),
                     {Num_dias: Int(TextInput2.Text)}
                 );
@@ -4232,4 +4232,52 @@
         Width: =1440
         Y: =976
         ZIndex: =12
+
+    Button3 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 120, 212, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |
+            =ForAll(
+                Gallery3.AllItems,
+                Patch(
+                    DCVCOrdeness,
+                    LookUp(
+                        DCVCOrdeness,
+                        nu_orden = Var_NumeroOrden
+                    ),
+                    {
+                        fe_final: DatePicker1_1.SelectedDate,
+                        day_diff: DateDiff(
+                            Today(),
+                            DatePicker1_1.SelectedDate,
+                            TimeUnit.Days
+                        )
+                    }
+                )
+            );
+            Notify(
+                "Fechas actualizadas",
+                NotificationType.Success
+            )
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Botón"
+        X: =603
+        Y: =174
+        ZIndex: =13
 

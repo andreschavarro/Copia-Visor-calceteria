@@ -40,7 +40,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AGUJAS_Columna1",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1662,7 +1662,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "cantidad_colores_Columna1",
-      "ParentIndex": 1,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1762,7 +1762,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "centro_proceso_Columna2",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3935,7 +3935,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "day_diff_Columna1",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4145,7 +4145,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "de_desarrollador_Columna2",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4245,7 +4245,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "de_ejecutiva_Columna1",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4345,7 +4345,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "dias_registro_Columna1",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6825,7 +6825,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "nom_recurso_Columna2",
-      "ParentIndex": 7,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7037,7 +7037,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "num_recursos_Columna1",
-      "ParentIndex": 12,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7283,7 +7283,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tipo_muestra_Columna1",
-      "ParentIndex": 10,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
