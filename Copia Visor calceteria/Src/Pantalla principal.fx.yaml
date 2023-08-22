@@ -323,7 +323,7 @@
         ZIndex: =3
 
     "'Contenedor galeria tarjetas_1' As groupContainer.manualLayoutContainer":
-        Height: =802
+        Height: =813
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -331,7 +331,7 @@
         Visible: =varTarjetaVisible
         Width: =1400
         X: =14
-        Y: =185
+        Y: =174
         ZIndex: =4
 
         Icon4_1 As icon.OptionsList:
@@ -374,7 +374,7 @@
         "'Galeria todas las solicitudes_1' As gallery.galleryVertical":
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =766
+            Height: =712
             Items: |-
                 =SortByColumns(
                     Filter(
@@ -393,7 +393,7 @@
             Width: =1400
             WrapCount: |
                 =4
-            Y: =36
+            Y: =46
             ZIndex: =4
 
             "'Contenedor tarjeta_1' As groupContainer.manualLayoutContainer":
