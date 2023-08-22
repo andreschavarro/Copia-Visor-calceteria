@@ -137,7 +137,7 @@ Reporte As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(166, 166, 166, 1)
-            OnSelect: =Navigate('Pantalla principal_1')
+            OnSelect: =Navigate('Pantalla principal')
             PressedBorderColor: =
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =

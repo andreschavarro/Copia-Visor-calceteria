@@ -5,7 +5,7 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     Width: =1440
 
-    "'Contenedor Combox filtros' As groupContainer.manualLayoutContainer":
+    "'Contenedor Combox filtros_1' As groupContainer.manualLayoutContainer":
         BorderColor: =RGBA(255, 255, 255, 1)
         BorderStyle: =BorderStyle.None
         Height: =76
@@ -14,7 +14,7 @@
         Y: =88
         ZIndex: =1
 
-        InputNoOrden As text:
+        InputNoOrden_1 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -29,8 +29,8 @@
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
-            OnChange: =Set(Var_NumeroOrden,InputNoOrden.Text)
-            OnSelect: =Set(Var_NumeroOrden,InputNoOrden.Text)
+            OnChange: =Set(Var_NumeroOrden,InputNoOrden_1.Text)
+            OnSelect: =Set(Var_NumeroOrden,InputNoOrden_1.Text)
             PressedBorderColor: =RGBA(0, 120, 212, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
@@ -44,7 +44,7 @@
             Y: =20
             ZIndex: =3
 
-        ComboBoxCritica As combobox:
+        ComboBoxCritica_1 As combobox:
             BorderColor: =RGBA(166, 166, 166, 1)
             ChevronBackground: =RGBA(255, 255, 255, 1)
             ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
@@ -63,13 +63,13 @@
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Crítica"
             Items: =["Verde" , "Amarillo" , "Rojo" , "Negro"]
-            OnChange: =Set(Var_Critica,ComboBoxCritica.Selected.Value)
-            OnSelect: =Set(Var_Critica,ComboBoxCritica.Selected.Value)
+            OnChange: =Set(Var_Critica,ComboBoxCritica_1.Selected.Value)
+            OnSelect: =Set(Var_Critica,ComboBoxCritica_1.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
-            SearchItems: =Search(["Verde" , "Amarillo" , "Rojo" , "Negro"],ComboBoxCritica.SearchText,"Value")
+            SearchItems: =Search(["Verde" , "Amarillo" , "Rojo" , "Negro"],ComboBoxCritica_1.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
             Size: =13
@@ -78,7 +78,7 @@
             Y: =20
             ZIndex: =4
 
-        ComboBoxDesarrollador As combobox:
+        ComboBoxDesarrollador_1 As combobox:
             BorderColor: =RGBA(166, 166, 166, 1)
             ChevronBackground: =RGBA(255, 255, 255, 1)
             ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
@@ -97,21 +97,21 @@
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Desarrollador"
             Items: =Distinct(DCVCOrdeness,de_desarrollador)
-            OnChange: =Set(Var_Desarrollador,ComboBoxDesarrollador.Selected.Value)
-            OnSelect: =Set(Var_Desarrollador,ComboBoxDesarrollador.Selected.Value)
+            OnChange: =Set(Var_Desarrollador,ComboBoxDesarrollador_1.Selected.Value)
+            OnSelect: =Set(Var_Desarrollador,ComboBoxDesarrollador_1.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
-            SearchItems: =Search(Distinct(DCVCOrdeness,de_desarrollador),ComboBoxDesarrollador.SearchText,"Value")
+            SearchItems: =Search(Distinct(DCVCOrdeness,de_desarrollador),ComboBoxDesarrollador_1.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
             Size: =13
-            Width: =350
+            Width: =370
             Y: =20
             ZIndex: =9
 
-        ComboBoxRecurso As combobox:
+        ComboBoxRecurso_1 As combobox:
             BorderColor: =RGBA(166, 166, 166, 1)
             ChevronBackground: =RGBA(255, 255, 255, 1)
             ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
@@ -129,14 +129,15 @@
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Recurso"
+            IsSearchable: =false
             Items: =Distinct(DCVCOrdeness,nom_recurso)
-            OnChange: =Set(Var_Recurso,ComboBoxRecurso.Selected.Value)
-            OnSelect: =Set(Var_Recurso,ComboBoxRecurso.Selected.Value)
+            OnChange: =Set(Var_Recurso,ComboBoxRecurso_1.Selected.Value)
+            OnSelect: =Set(Var_Recurso,ComboBoxRecurso_1.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
-            SearchItems: =Search(Distinct(DCVCOrdeness,nom_recurso),ComboBoxRecurso.SearchText,"Value")
+            SearchItems: =[]
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
             Size: =13
@@ -145,8 +146,8 @@
             Y: =20
             ZIndex: =10
 
-    "'Contenedor barra navegacion' As groupContainer.manualLayoutContainer":
-        Height: =65
+    "'Contenedor barra navegacion_2' As groupContainer.manualLayoutContainer":
+        Height: =77
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -154,20 +155,21 @@
         Width: =1440
         ZIndex: =2
 
-        "'Naviation Center' As rectangle":
+        "'Naviation Center_2' As rectangle":
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(66, 75, 90, 1)
             FocusedBorderThickness: =4
-            Height: =64
+            Height: =74
             HoverFill: =
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =1440
+            Y: =2
             ZIndex: =1
 
-        Label1 As label:
+        Label1_5 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -184,42 +186,7 @@
             Y: =10
             ZIndex: =2
 
-        Label1_1 As label:
-            BorderColor: =RGBA(255, 255, 255, 1)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Size: =13
-            Text: ="Visualizador de Ordenes "
-            Width: =217
-            X: =1064
-            Y: =12
-            ZIndex: =3
-
-        Label1_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            OnSelect: =Navigate(Reporte)
-            Size: =13
-            Text: ="Reporte"
-            Width: =76
-            X: =1294
-            Y: =12
-            ZIndex: =4
-
-        Rectangle1 As rectangle:
+        Rectangle1_2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             DisabledFill: =RGBA(166, 166, 166, 1)
@@ -229,11 +196,11 @@
             HoverFill: =
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =210
-            X: =1065
-            Y: =50
+            X: =1072
+            Y: =63
             ZIndex: =5
 
-        Image1 As image:
+        Image1_2 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -255,7 +222,7 @@
             Y: =12
             ZIndex: =7
 
-        Image6 As image:
+        Image6_2 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -269,11 +236,67 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =60
-            X: =18
-            Y: =2
+            Y: =5
             ZIndex: =9
 
-    Label10 As label:
+        Button5_16 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(66, 75, 90, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(166, 166, 166, 1)
+            OnSelect: =Navigate(Reporte)
+            PressedBorderColor: =
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Reporte"
+            Width: =94
+            X: =1282
+            Y: =15
+            ZIndex: =10
+
+        Button5_17 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(66, 75, 90, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(166, 166, 166, 1)
+            OnSelect: |
+                =Navigate('vista tabla')
+            PressedBorderColor: =
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Vista tabla"
+            Width: =119
+            X: =823
+            Y: =14
+            ZIndex: =11
+
+    Label10_3 As label:
         Align: =Align.Center
         BorderColor: =RGBA(66, 75, 90, 1)
         BorderStyle: =BorderStyle.None
@@ -299,7 +322,7 @@
         Y: =124
         ZIndex: =3
 
-    "'Contenedor galeria tarjetas' As groupContainer.manualLayoutContainer":
+    "'Contenedor galeria tarjetas_1' As groupContainer.manualLayoutContainer":
         Height: =802
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
@@ -311,7 +334,7 @@
         Y: =185
         ZIndex: =4
 
-        Icon4 As icon.OptionsList:
+        Icon4_1 As icon.OptionsList:
             BorderColor: =RGBA(166, 166, 166, 1)
             Color: =RGBA(66, 75, 90, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -334,7 +357,7 @@
             Y: =5
             ZIndex: =2
 
-        Rectangle5_1 As rectangle:
+        Rectangle5_3 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -348,7 +371,7 @@
             Y: =57
             ZIndex: =3
 
-        "'Galeria todas las solicitudes' As gallery.galleryVertical":
+        "'Galeria todas las solicitudes_1' As gallery.galleryVertical":
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
             Height: =766
@@ -370,10 +393,10 @@
             Width: =1400
             WrapCount: |
                 =4
-            Y: =58
+            Y: =36
             ZIndex: =4
 
-            "'Contenedor tarjeta' As groupContainer.manualLayoutContainer":
+            "'Contenedor tarjeta_1' As groupContainer.manualLayoutContainer":
                 Height: =197
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
@@ -383,7 +406,7 @@
                 Y: =2
                 ZIndex: =2
 
-                "'Rectangle 2_2' As rectangle":
+                "'Rectangle 2_3' As rectangle":
                     BorderColor: =RGBA(230, 230, 230, 1)
                     BorderThickness: =1
                     DisabledFill: =RGBA(166, 166, 166, 1)
@@ -397,7 +420,7 @@
                     Y: =5
                     ZIndex: =1
 
-                "'Estado solicitud_10' As label":
+                "'Estado solicitud_13' As label":
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     Color: =RGBA(33, 36, 41, 1)
@@ -420,7 +443,7 @@
                     Y: =52
                     ZIndex: =3
 
-                "'Desarrollador:_9' As label":
+                "'Desarrollador:_10' As label":
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     Color: =RGBA(33, 36, 41, 1)
@@ -443,7 +466,7 @@
                     Y: =96
                     ZIndex: =4
 
-                "'Fecha estimada de finalización:_9' As label":
+                "'Fecha estimada de finalización:_10' As label":
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     Color: =RGBA(33, 36, 41, 1)
@@ -466,7 +489,7 @@
                     Y: =139
                     ZIndex: =5
 
-                "'En proceso._10' As label":
+                "'En proceso._13' As label":
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     Color: =RGBA(0, 0, 0, 1)
@@ -487,7 +510,7 @@
                     Y: =69
                     ZIndex: =7
 
-                "'Mario Arango Vasco_9' As label":
+                "'Mario Arango Vasco_10' As label":
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     Color: =RGBA(0, 0, 0, 1)
@@ -508,7 +531,7 @@
                     Y: =114
                     ZIndex: =8
 
-                Button2_1 As button:
+                Button2_3 As button:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(166, 166, 166, 1)
@@ -527,13 +550,13 @@
                             true
                         );
                         Set(
-                            varFechaFinal,
-                            ThisItem.fe_final
-                        );
-                        Set(
                             varOrden,
                             ThisItem.nu_orden
                         );
+                        Set(
+                            varFechaFinal,
+                            ThisItem.fe_final)
+                        ;
                         Set(
                             varEstado,
                             ThisItem.centro_proceso
@@ -906,7 +929,7 @@
                     Y: =165
                     ZIndex: =11
 
-                "'En proceso._11' As label":
+                "'En proceso._12' As label":
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -928,7 +951,7 @@
                     Y: =25
                     ZIndex: =12
 
-                "'Estado solicitud_11' As label":
+                "'Estado solicitud_12' As label":
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -951,7 +974,7 @@
                     Y: =23
                     ZIndex: =13
 
-                "'En proceso._14' As label":
+                "'En proceso._17' As label":
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -975,7 +998,7 @@
                     Y: =45
                     ZIndex: =15
 
-                "'En proceso._15' As label":
+                "'En proceso._16' As label":
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     Color: =RGBA(0, 0, 0, 1)
@@ -997,7 +1020,7 @@
                     Y: =23
                     ZIndex: =16
 
-                Label11_1 As label:
+                Label11_3 As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -1014,7 +1037,7 @@
                     Y: =44
                     ZIndex: =18
 
-                Label14_1 As label:
+                Label14_2 As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -1039,7 +1062,7 @@
                     Y: =156
                     ZIndex: =19
 
-                Button2 As button:
+                Button2_2 As button:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1100,8 +1123,8 @@
                     Y: =21
                     ZIndex: =20
 
-    "'Contenedor galeria rejilla' As groupContainer.manualLayoutContainer":
-        Height: =803
+    "'Contenedor galeria rejilla_1' As groupContainer.manualLayoutContainer":
+        Height: =725
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -1112,11 +1135,11 @@
         Y: =185
         ZIndex: =5
 
-        "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        "Gallery3_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =734
+            Height: =654
             Items: |+
                 =SortByColumns(
                     Filter(
@@ -1133,13 +1156,12 @@
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
-            TemplateSize: =61
+            TemplateSize: =62
             Width: =1400
-            X: =
-            Y: =69
+            Y: =71
             ZIndex: =1
 
-            Title2 As label:
+            Title2_1 As label:
                 Align: =Align.Center
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -1147,7 +1169,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =26
+                Height: =43
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -1155,30 +1177,30 @@
                 PaddingTop: =0
                 Text: =ThisItem.de_desarrollador
                 VerticalAlign: =VerticalAlign.Top
-                Width: =305
-                X: =Subtitle1.X+Subtitle1.Width
-                Y: =Subtitle1.Y
+                Width: =267
+                X: =Subtitle1_1.X+Subtitle1_1.Width
+                Y: =Subtitle1_1.Y
                 ZIndex: =1
 
-            Separator1 As rectangle:
+            Separator1_1 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 Fill: =RGBA(128, 128, 128, 1)
                 Height: =2
                 OnSelect: =Select(Parent)
                 Width: =Parent.TemplateWidth
-                Y: =59
+                Y: =58
                 ZIndex: =2
 
-            Rectangle2 As rectangle:
+            Rectangle2_1 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                Height: =Parent.TemplateHeight - Separator1.Height
+                Height: =Parent.TemplateHeight - Separator1_1.Height
                 OnSelect: =Select(Parent)
                 Visible: =ThisItem.IsSelected
                 Width: =4
                 ZIndex: =3
 
-            Title2_3 As label:
+            Title2_5 As label:
                 Align: =Align.Center
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -1194,16 +1216,16 @@
                 PaddingTop: =0
                 Text: =ThisItem.centro_proceso
                 VerticalAlign: =VerticalAlign.Top
-                Width: =Label9_4.Width
-                X: =Title2.X+Title2.Width
-                Y: =Title2.Y
+                Width: =Label9_13.Width
+                X: =564
+                Y: =16
                 ZIndex: =4
 
-            DatePicker1_1 As datepicker:
+            DatePicker1_2 As datepicker:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 Color: =RGBA(51, 51, 51, 1)
-                DefaultDate: |-
+                DefaultDate: |
                     =If(
                         IsBlank(ThisItem.fe_final),
                         "",
@@ -1220,24 +1242,22 @@
                         ),
                         FontWeight.Lighter,
                         FontWeight.Bold)
-                Height: =25
                 HoverDateFill: =RGBA(200, 200, 200, 1)
                 IconBackground: =RGBA(66, 75, 90, 100)
                 IsEditable: =true
                 OnChange: |+
-                    =UpdateContext({fechaHover:DatePicker1_1.SelectedDate});
+                    =UpdateContext({fechaHover:DatePicker1_2.SelectedDate});
                     
                 OnSelect: =
                 PaddingTop: =5
                 SelectedDateFill: =RGBA(0, 120, 212, 1)
                 Size: =13
                 Tooltip: =
-                Width: =Label9_3.Width
-                X: =1216
-                Y: =17
+                Width: =Label9_8.Width
+                X: =Label13_1.X+Label13_1.Width
                 ZIndex: =5
 
-            Icon6_1 As icon.Send:
+            Icon6_3 As icon.Send:
                 BorderColor: =RGBA(66, 75, 90, 1)
                 Color: =RGBA(66, 75, 90, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1257,10 +1277,10 @@
                             nu_orden = ThisItem.nu_orden
                         ),
                         {
-                            fe_final: DatePicker1_1.SelectedDate,
+                            fe_final: DatePicker1_2.SelectedDate,
                             day_diff: DateDiff(
                                 Today(),
-                                DatePicker1_1.SelectedDate,
+                                DatePicker1_2.SelectedDate,
                                 TimeUnit.Days
                             )
                         }
@@ -1272,30 +1292,12 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =Icon7.Width
-                X: =1355
-                Y: =17
+                Width: =Icon7_1.Width
+                X: =1192
+                Y: =7
                 ZIndex: =6
 
-            Label13 As label:
-                Align: =Align.Center
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =25
-                OnSelect: =Select(Parent)
-                Size: =13
-                Text: =CountIf(DCVCOrdeness, nom_recurso = ThisItem.nom_recurso)
-                Width: =Label9_7.Width
-                X: =Label11.X+Label11.Width
-                Y: =15
-                ZIndex: =7
-
-            Label11 As label:
+            Label13_1 As label:
                 Align: =Align.Center
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -1305,6 +1307,24 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =26
+                OnSelect: =Select(Parent)
+                Size: =13
+                Text: =CountIf(DCVCOrdeness, nom_recurso = ThisItem.nom_recurso)
+                Width: =Label9_11.Width
+                X: =Label11_2.X+Label11_2.Width
+                Y: =15
+                ZIndex: =7
+
+            Label11_2 As label:
+                Align: =Align.Center
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =27
                 OnSelect: =Select(Parent)
                 Size: =13
                 Text: |-
@@ -1325,12 +1345,12 @@
                             day_diff
                         ) 
                     )
-                Width: =Label9_6.Width
-                X: =Title2_4.X+Title2_4.Width
+                Width: =143
+                X: =Title2_6.X+Title2_6.Width
                 Y: =15
                 ZIndex: =8
 
-            Title2_4 As label:
+            Title2_6 As label:
                 Align: =Align.Center
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -1364,12 +1384,12 @@
                         )
                     )
                 VerticalAlign: =VerticalAlign.Top
-                Width: =Label9_5.Width
-                X: =Title2_3.X+Title2_3.Width
-                Y: =Title2_3.Y
+                Width: =Label9_9.Width
+                X: =828
+                Y: =14
                 ZIndex: =9
 
-            Subtitle1 As label:
+            Subtitle1_1 As label:
                 Align: =Align.Center
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -1377,7 +1397,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =26
+                Height: =27
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -1386,12 +1406,50 @@
                 Size: =12
                 Text: =ThisItem.nu_orden
                 VerticalAlign: =VerticalAlign.Top
-                Width: =Label9.Width
-                X: =Label9.X
+                Width: =164
+                X: =Label9_1.X
                 Y: =15
                 ZIndex: =10
 
-        Label9_2 As label:
+            Title2_7 As label:
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =24
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =ThisItem.de_cliente
+                VerticalAlign: =VerticalAlign.Top
+                Width: =111
+                X: =Title2_1.X+Title2_1.Width
+                Y: =17
+                ZIndex: =11
+
+            Label15 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =42
+                OnSelect: =Select(Parent)
+                Size: =13
+                Text: =ThisItem.grupo_proceso
+                Width: =80
+                X: =722
+                Y: =6
+                ZIndex: =12
+
+        Label9_12 As label:
             Align: =Align.Center
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1403,12 +1461,12 @@
             FontWeight: =FontWeight.Bold
             Size: =13
             Text: ="Desarrollador"
-            Width: =311
-            X: =Label9.X+Label9.Width
+            Width: =267
+            X: =Label9_1.X+Label9_1.Width
             Y: =18
             ZIndex: =2
 
-        Icon7 As icon.CollapseView:
+        Icon7_1 As icon.CollapseView:
             BorderColor: =RGBA(166, 166, 166, 1)
             Color: =RGBA(66, 75, 90, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1431,7 +1489,7 @@
             Y: =
             ZIndex: =3
 
-        Label9_3 As label:
+        Label9_8 As label:
             Align: =Align.Center
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1445,12 +1503,11 @@
             Size: =13
             Text: ="Fecha"
             Width: =139
-            X: =Label9_7.X+Label9_7.Width
+            X: =Label9_11.X+Label9_11.Width
             Y: =16
             ZIndex: =4
 
-        Label9_4 As label:
-            Align: =Align.Center
+        Label9_13 As label:
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -1462,12 +1519,12 @@
             Height: =39
             Size: =13
             Text: ="Proceso"
-            Width: =214
-            X: =Label9_2.X+Label9_2.Width
+            Width: =133
+            X: =580
             Y: =18
             ZIndex: =5
 
-        Rectangle5 As rectangle:
+        Rectangle5_2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1481,7 +1538,7 @@
             Y: =57
             ZIndex: =6
 
-        Label9_5 As label:
+        Label9_9 As label:
             Align: =Align.Center
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1491,15 +1548,15 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =41
+            Height: =38
             Size: =13
             Text: ="Recurso"
-            Width: =257
-            X: =Label9_4.X+Label9_4.Width
-            Y: =17
+            Width: =188
+            X: =860
+            Y: =18
             ZIndex: =7
 
-        Label9_6 As label:
+        Label9_10 As label:
             Align: =Align.Center
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1513,11 +1570,11 @@
             Size: =13
             Text: ="Última Fecha"
             Width: =159
-            X: =Label9_5.X+Label9_5.Width
+            X: =Label9_9.X+Label9_9.Width
             Y: =17
             ZIndex: =8
 
-        Label9_7 As label:
+        Label9_11 As label:
             Align: =Align.Center
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1531,11 +1588,11 @@
             Size: =13
             Text: ="Solicitudes recurso"
             Width: =119
-            X: =Label9_6.X+Label9_6.Width
+            X: =Label9_10.X+Label9_10.Width
             Y: =17
             ZIndex: =9
 
-        Label9 As label:
+        Label9_1 As label:
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -1547,11 +1604,46 @@
             Size: =13
             Text: ="No. solicitud"
             Width: =149
-            X: =-Slider1.Value*3
+            X: =-Slider1_1.Value*5
             Y: =18
             ZIndex: =10
 
-    Label10_1 As label:
+        Label9_14 As label:
+            Align: =Align.Center
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =39
+            Size: =13
+            Text: ="Cliente"
+            Width: =200
+            X: =Label9_12.X+Label9_12.Width
+            Y: =16
+            ZIndex: =11
+
+        Label9_15 As label:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =42
+            Size: =13
+            Text: ="Grupo Proceso"
+            Width: =148
+            X: =691
+            Y: =16
+            ZIndex: =12
+
+    Label10_2 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -1569,7 +1661,7 @@
         Y: =88
         ZIndex: =6
 
-    Button1 As button:
+    Button1_1 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1635,7 +1727,7 @@
         Y: =124
         ZIndex: =7
 
-    "'Contenedor Detalle Imagen' As groupContainer.manualLayoutContainer":
+    "'Contenedor Detalle Imagen_1' As groupContainer.manualLayoutContainer":
         DropShadow: =DropShadow.Light
         Fill: =RGBA(255, 255, 255, 1)
         Height: =915
@@ -1649,7 +1741,7 @@
         Y: =77
         ZIndex: =8
 
-        Icon8 As icon.Cancel:
+        Icon8_1 As icon.Cancel:
             BorderColor: =RGBA(166, 166, 166, 1)
             Color: =RGBA(66, 75, 90, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1672,7 +1764,7 @@
             X: =1348
             ZIndex: =1
 
-        UploadedImage1_1 As image:
+        UploadedImage1_2 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderThickness: =2
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1681,7 +1773,7 @@
             Height: =840
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(66, 75, 90, 1)
-            Image: =If(IsBlank(AddMediaButton1_1.Media), SampleImage, AddMediaButton1_1.Media)
+            Image: =If(IsBlank(AddMediaButton1_2.Media), SampleImage, AddMediaButton1_2.Media)
             ImagePosition: =ImagePosition.Fill
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
@@ -1690,7 +1782,7 @@
             Y: =40
             ZIndex: =2
 
-        AddMediaButton1_1 As addMedia:
+        AddMediaButton1_2 As addMedia:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1714,7 +1806,7 @@
             Y: =40
             ZIndex: =3
 
-    "'contenedor ver detalle PopUp' As groupContainer.manualLayoutContainer":
+    "'contenedor ver detalle PopUp_1' As groupContainer.manualLayoutContainer":
         Height: =915
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
@@ -1728,7 +1820,7 @@
         Y: =77
         ZIndex: =9
 
-        Rectangle3_1 As rectangle:
+        Rectangle3_2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1762,7 +1854,7 @@
             Width: =1346
             ZIndex: =1
 
-        Button7_1 As button:
+        Button7_2 As button:
             AutoDisableOnSelect: =false
             BorderColor: =RGBA(204, 204, 204, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1789,7 +1881,7 @@
             X: =162
             ZIndex: =2
 
-        Icon2_1 As icon.Cancel:
+        Icon2_2 As icon.Cancel:
             BorderColor: =RGBA(166, 166, 166, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
@@ -1854,7 +1946,7 @@
             Y: =21
             ZIndex: =3
 
-        Label1_16 As label:
+        Label1_25 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1872,7 +1964,7 @@
             Y: =31
             ZIndex: =4
 
-        Label1_17 As label:
+        Label1_27 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1889,7 +1981,7 @@
             Y: =32
             ZIndex: =5
 
-        Label8_1 As label:
+        Label8_2 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -1908,7 +2000,7 @@
             Y: =87
             ZIndex: =6
 
-        Label1_21 As label:
+        Label1_26 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -1927,7 +2019,7 @@
             Y: =31
             ZIndex: =7
 
-        "'Contenedor tracking' As groupContainer.manualLayoutContainer":
+        "'Contenedor tracking_1' As groupContainer.manualLayoutContainer":
             Height: =870
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
@@ -1937,7 +2029,7 @@
             X: =774
             ZIndex: =8
 
-            Circle1_1 As circle:
+            Circle1_2 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -1951,7 +2043,7 @@
                 Y: =6
                 ZIndex: =1
 
-            Rectangle4_9 As rectangle:
+            Rectangle4_12 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -1966,7 +2058,7 @@
                 Y: =146
                 ZIndex: =2
 
-            Rectangle4_5 As rectangle:
+            Rectangle4_10 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -1982,7 +2074,7 @@
                 Y: =40
                 ZIndex: =3
 
-            Label1_15 As label:
+            Label1_23 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2002,7 +2094,7 @@
                 Y: =1
                 ZIndex: =4
 
-            Label1_18 As label:
+            Label1_24 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2022,7 +2114,7 @@
                 Y: =68
                 ZIndex: =5
 
-            Label2_2 As label:
+            Label2_14 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2040,7 +2132,7 @@
                 Y: =25
                 ZIndex: =6
 
-            Rectangle4_16 As rectangle:
+            Rectangle4_20 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -2055,7 +2147,7 @@
                 Y: =34
                 ZIndex: =7
 
-            Circle1_17 As circle:
+            Circle1_21 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -2069,7 +2161,7 @@
                 Y: =66
                 ZIndex: =8
 
-            Icon4_3 As icon.Check:
+            Icon4_4 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2089,7 +2181,7 @@
                 Y: =73
                 ZIndex: =9
 
-            Rectangle4_6 As rectangle:
+            Rectangle4_11 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -2105,7 +2197,7 @@
                 Y: =106
                 ZIndex: =10
 
-            Circle1_18 As circle:
+            Circle1_22 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -2119,7 +2211,7 @@
                 Y: =134
                 ZIndex: =11
 
-            Icon4_17 As icon.Check:
+            Icon4_21 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2139,7 +2231,7 @@
                 Y: =141
                 ZIndex: =12
 
-            Rectangle4_7 As rectangle:
+            Rectangle4_13 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -2155,7 +2247,7 @@
                 Y: =174
                 ZIndex: =13
 
-            Circle1_19 As circle:
+            Circle1_23 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -2169,7 +2261,7 @@
                 Y: =160
                 ZIndex: =14
 
-            Icon4_18 As icon.Check:
+            Icon4_22 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2189,7 +2281,7 @@
                 Y: =174
                 ZIndex: =15
 
-            Rectangle4_8 As rectangle:
+            Rectangle4_14 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -2205,7 +2297,7 @@
                 Y: =174
                 ZIndex: =16
 
-            Circle1_20 As circle:
+            Circle1_24 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -2219,7 +2311,7 @@
                 Y: =160
                 ZIndex: =17
 
-            Icon4_19 As icon.Check:
+            Icon4_23 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2239,7 +2331,7 @@
                 Y: =174
                 ZIndex: =18
 
-            Rectangle4_17 As rectangle:
+            Rectangle4_21 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -2255,7 +2347,7 @@
                 Y: =174
                 ZIndex: =19
 
-            Circle1_28 As circle:
+            Circle1_36 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -2269,7 +2361,7 @@
                 Y: =160
                 ZIndex: =20
 
-            Icon4_20 As icon.Check:
+            Icon4_24 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2289,7 +2381,7 @@
                 Y: =174
                 ZIndex: =21
 
-            Rectangle4_18 As rectangle:
+            Rectangle4_22 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -2305,7 +2397,7 @@
                 Y: =174
                 ZIndex: =22
 
-            Circle1_29 As circle:
+            Circle1_37 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -2319,7 +2411,7 @@
                 Y: =160
                 ZIndex: =23
 
-            Icon4_27 As icon.Check:
+            Icon4_34 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2339,7 +2431,7 @@
                 Y: =174
                 ZIndex: =24
 
-            Rectangle4_19 As rectangle:
+            Rectangle4_28 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -2355,7 +2447,7 @@
                 Y: =174
                 ZIndex: =25
 
-            Circle1_30 As circle:
+            Circle1_38 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -2369,7 +2461,7 @@
                 Y: =160
                 ZIndex: =26
 
-            Icon4_28 As icon.Check:
+            Icon4_35 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2389,7 +2481,7 @@
                 Y: =174
                 ZIndex: =27
 
-            Rectangle4_23 As rectangle:
+            Rectangle4_29 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -2405,7 +2497,7 @@
                 Y: =174
                 ZIndex: =28
 
-            Circle1_31 As circle:
+            Circle1_39 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -2419,7 +2511,7 @@
                 Y: =160
                 ZIndex: =29
 
-            Icon4_29 As icon.Check:
+            Icon4_36 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2439,7 +2531,7 @@
                 Y: =174
                 ZIndex: =30
 
-            Rectangle4_24 As rectangle:
+            Rectangle4_30 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -2455,7 +2547,7 @@
                 Y: =174
                 ZIndex: =31
 
-            Circle1_32 As circle:
+            Circle1_40 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -2469,7 +2561,7 @@
                 Y: =160
                 ZIndex: =32
 
-            Icon4_30 As icon.Check:
+            Icon4_37 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2489,7 +2581,7 @@
                 Y: =174
                 ZIndex: =33
 
-            Rectangle4_25 As rectangle:
+            Rectangle4_31 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -2505,7 +2597,7 @@
                 Y: =174
                 ZIndex: =34
 
-            Circle1_33 As circle:
+            Circle1_41 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -2519,7 +2611,7 @@
                 Y: =160
                 ZIndex: =35
 
-            Icon4_31 As icon.Check:
+            Icon4_38 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2539,7 +2631,7 @@
                 Y: =174
                 ZIndex: =36
 
-            Rectangle4_26 As rectangle:
+            Rectangle4_32 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -2555,7 +2647,7 @@
                 Y: =174
                 ZIndex: =37
 
-            Circle1_34 As circle:
+            Circle1_42 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -2569,7 +2661,7 @@
                 Y: =160
                 ZIndex: =38
 
-            Icon4_32 As icon.Check:
+            Icon4_39 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2589,7 +2681,7 @@
                 Y: =174
                 ZIndex: =39
 
-            Rectangle4_27 As rectangle:
+            Rectangle4_33 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderStyle: =BorderStyle.Dashed
                 BorderThickness: =2
@@ -2605,7 +2697,7 @@
                 Y: =174
                 ZIndex: =40
 
-            Circle1_35 As circle:
+            Circle1_43 As circle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =2
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -2619,7 +2711,7 @@
                 Y: =160
                 ZIndex: =41
 
-            Icon4_33 As icon.Check:
+            Icon4_40 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2639,7 +2731,7 @@
                 Y: =174
                 ZIndex: =42
 
-            Label2_3 As label:
+            Label2_15 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2657,7 +2749,7 @@
                 Y: =98
                 ZIndex: =43
 
-            Label1_39 As label:
+            Label1_50 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2677,7 +2769,7 @@
                 Y: =138
                 ZIndex: =44
 
-            Label1_40 As label:
+            Label1_51 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2697,7 +2789,7 @@
                 Y: =173
                 ZIndex: =45
 
-            Label2_23 As label:
+            Label2_34 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2715,7 +2807,7 @@
                 Y: =162
                 ZIndex: =46
 
-            Label2_24 As label:
+            Label2_35 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2733,7 +2825,7 @@
                 Y: =182
                 ZIndex: =47
 
-            Label1_41 As label:
+            Label1_57 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2753,7 +2845,7 @@
                 Y: =179
                 ZIndex: =48
 
-            Label1_42 As label:
+            Label1_53 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2773,7 +2865,7 @@
                 Y: =173
                 ZIndex: =49
 
-            Label2_25 As label:
+            Label2_36 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2791,7 +2883,7 @@
                 Y: =182
                 ZIndex: =50
 
-            Label2_26 As label:
+            Label2_37 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2809,7 +2901,7 @@
                 Y: =182
                 ZIndex: =51
 
-            Label1_43 As label:
+            Label1_58 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2831,7 +2923,7 @@
                 Y: =179
                 ZIndex: =52
 
-            Label1_44 As label:
+            Label1_54 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2851,7 +2943,7 @@
                 Y: =173
                 ZIndex: =53
 
-            Label2_27 As label:
+            Label2_38 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2869,7 +2961,7 @@
                 Y: =182
                 ZIndex: =54
 
-            Label2_28 As label:
+            Label2_39 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -2887,7 +2979,7 @@
                 Y: =182
                 ZIndex: =55
 
-            Icon5_14 As icon.Check:
+            Icon5_28 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2907,7 +2999,7 @@
                 Y: =6
                 ZIndex: =56
 
-            Icon5_15 As icon.Check:
+            Icon5_29 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2927,7 +3019,7 @@
                 Y: =72
                 ZIndex: =57
 
-            Icon5_17 As icon.Check:
+            Icon5_31 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2947,7 +3039,7 @@
                 Y: =139
                 ZIndex: =58
 
-            Icon5_18 As icon.Check:
+            Icon5_32 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2967,7 +3059,7 @@
                 Y: =172
                 ZIndex: =59
 
-            Icon5_19 As icon.Check:
+            Icon5_33 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -2987,7 +3079,7 @@
                 Y: =172
                 ZIndex: =60
 
-            Icon5_20 As icon.Check:
+            Icon5_34 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -3007,7 +3099,7 @@
                 Y: =172
                 ZIndex: =61
 
-            Icon5_21 As icon.Check:
+            Icon5_35 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -3027,7 +3119,7 @@
                 Y: =172
                 ZIndex: =62
 
-            Icon5_22 As icon.Check:
+            Icon5_36 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -3047,7 +3139,7 @@
                 Y: =172
                 ZIndex: =63
 
-            Icon5_23 As icon.Check:
+            Icon5_37 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -3067,7 +3159,7 @@
                 Y: =172
                 ZIndex: =64
 
-            Icon5_24 As icon.Check:
+            Icon5_38 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -3087,7 +3179,7 @@
                 Y: =172
                 ZIndex: =65
 
-            Icon5_25 As icon.Check:
+            Icon5_39 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -3107,7 +3199,7 @@
                 Y: =172
                 ZIndex: =66
 
-            Icon5_26 As icon.Check:
+            Icon5_40 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -3127,7 +3219,7 @@
                 Y: =172
                 ZIndex: =67
 
-            Icon5_27 As icon.Check:
+            Icon5_41 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -3147,7 +3239,7 @@
                 Y: =172
                 ZIndex: =68
 
-            Label1_45 As label:
+            Label1_59 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3167,7 +3259,7 @@
                 Y: =179
                 ZIndex: =69
 
-            Label1_46 As label:
+            Label1_52 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3187,7 +3279,7 @@
                 Y: =173
                 ZIndex: =70
 
-            Label2_29 As label:
+            Label2_40 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3205,7 +3297,7 @@
                 Y: =182
                 ZIndex: =71
 
-            Label2_30 As label:
+            Label2_41 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3223,7 +3315,7 @@
                 Y: =182
                 ZIndex: =72
 
-            Label1_47 As label:
+            Label1_60 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3243,7 +3335,7 @@
                 Y: =179
                 ZIndex: =73
 
-            Label1_48 As label:
+            Label1_55 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3263,7 +3355,7 @@
                 Y: =173
                 ZIndex: =74
 
-            Label2_31 As label:
+            Label2_42 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3281,7 +3373,7 @@
                 Y: =182
                 ZIndex: =75
 
-            Label2_32 As label:
+            Label2_43 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3299,7 +3391,7 @@
                 Y: =182
                 ZIndex: =76
 
-            Label1_49 As label:
+            Label1_56 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3321,7 +3413,7 @@
                 Y: =173
                 ZIndex: =77
 
-            Label2_33 As label:
+            Label2_44 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3339,7 +3431,7 @@
                 Y: =182
                 ZIndex: =78
 
-            Icon5_16 As icon.Check:
+            Icon5_30 As icon.Check:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
@@ -3359,7 +3451,7 @@
                 Y: =72
                 ZIndex: =79
 
-        "'Contenedor comentarios' As groupContainer.manualLayoutContainer":
+        "'Contenedor comentarios_1' As groupContainer.manualLayoutContainer":
             Height: =344
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
@@ -3371,7 +3463,7 @@
             Y: =491
             ZIndex: =9
 
-            Button3_1 As button:
+            Button3_2 As button:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 DisabledBorderColor: =RGBA(66, 75, 90, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -3399,7 +3491,7 @@
                 Y: =13
                 ZIndex: =1
 
-            TextInput2_1 As text:
+            TextInput2_4 As text:
                 Align: =Align.Center
                 BorderColor: =RGBA(166, 166, 166, 1)
                 BorderThickness: =2
@@ -3432,7 +3524,7 @@
                 Y: =48
                 ZIndex: =2
 
-            Button5_2 As button:
+            Button5_4 As button:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -3462,7 +3554,7 @@
                 Y: =295
                 ZIndex: =3
 
-            Icon6 As icon.Send:
+            Icon6_2 As icon.Send:
                 BorderColor: =RGBA(66, 75, 90, 1)
                 Color: =RGBA(66, 75, 90, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -3496,7 +3588,7 @@
                 Y: =292
                 ZIndex: =4
 
-            Icon2 As icon.Message:
+            Icon2_3 As icon.Message:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 Color: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -3519,7 +3611,7 @@
                 Y: =14
                 ZIndex: =5
 
-        "'Contenedor detalle solicitud' As groupContainer.manualLayoutContainer":
+        "'Contenedor detalle solicitud_1' As groupContainer.manualLayoutContainer":
             DropShadow: =DropShadow.Semilight
             Height: =759
             RadiusBottomLeft: =4
@@ -3532,7 +3624,7 @@
             Y: =88
             ZIndex: =10
 
-            Label2 As label:
+            Label2_46 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3550,7 +3642,7 @@
                 Y: =514
                 ZIndex: =1
 
-            Label2_1 As label:
+            Label2_47 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3567,7 +3659,7 @@
                 Y: =542
                 ZIndex: =2
 
-            Label2_4 As label:
+            Label2_20 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3585,7 +3677,7 @@
                 Y: =358
                 ZIndex: =3
 
-            Label2_5 As label:
+            Label2_21 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3602,7 +3694,7 @@
                 Y: =386
                 ZIndex: =4
 
-            Label2_6 As label:
+            Label2_16 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3621,7 +3713,7 @@
                 Y: =114
                 ZIndex: =5
 
-            Label2_7 As label:
+            Label2_17 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -3639,7 +3731,7 @@
                 Y: =167
                 ZIndex: =6
 
-            Label2_8 As label:
+            Label2_18 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3658,7 +3750,7 @@
                 Y: =269
                 ZIndex: =7
 
-            Label2_9 As label:
+            Label2_19 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3675,7 +3767,7 @@
                 Y: =297
                 ZIndex: =8
 
-            Rectangle3 As rectangle:
+            Rectangle3_3 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3688,7 +3780,7 @@
                 Width: =579
                 ZIndex: =9
 
-            Icon5 As icon.Message:
+            Icon5_1 As icon.Message:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 Color: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -3711,7 +3803,7 @@
                 Y: =4
                 ZIndex: =10
 
-            Label2_10 As label:
+            Label2_22 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3730,7 +3822,7 @@
                 Y: =436
                 ZIndex: =11
 
-            Label2_11 As label:
+            Label2_45 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3747,7 +3839,7 @@
                 Y: =464
                 ZIndex: =12
 
-            Label2_12 As label:
+            Label2_48 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3766,7 +3858,7 @@
                 Y: =599
                 ZIndex: =13
 
-            Label2_13 As label:
+            Label2_49 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3782,7 +3874,7 @@
                 Y: =627
                 ZIndex: =14
 
-            Label1_19 As label:
+            Label1_29 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -3799,7 +3891,7 @@
                 Y: =675
                 ZIndex: =15
 
-            Label1_20 As label:
+            Label1_30 As label:
                 BorderThickness: =1
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -3818,14 +3910,14 @@
                 Y: =675
                 ZIndex: =16
 
-            AddMediaWithImage1 As group:
+            AddMediaWithImage1_1 As group:
                 Height: =5
                 Width: =5
                 X: =-176
                 Y: =-73
                 ZIndex: =17
 
-                UploadedImage1 As image:
+                UploadedImage1_3 As image:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderThickness: =2
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -3834,7 +3926,7 @@
                     Height: =200
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverFill: =RGBA(66, 75, 90, 1)
-                    Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
+                    Image: =If(IsBlank(AddMediaButton1_3.Media), SampleImage, AddMediaButton1_3.Media)
                     ImagePosition: =ImagePosition.Fill
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -3843,7 +3935,7 @@
                     Y: =68
                     ZIndex: =18
 
-                AddMediaButton1 As addMedia:
+                AddMediaButton1_3 As addMedia:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -3867,7 +3959,7 @@
                     Y: =68
                     ZIndex: =19
 
-            Label1_22 As label:
+            Label1_28 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -3886,7 +3978,7 @@
                 Y: =2
                 ZIndex: =20
 
-            Icon1 As icon.ZoomIn:
+            Icon1_1 As icon.ZoomIn:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 Color: =RGBA(66, 75, 90, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -3912,7 +4004,7 @@
                 Y: =268
                 ZIndex: =21
 
-    Container1 As groupContainer.manualLayoutContainer:
+    Container1_1 As groupContainer.manualLayoutContainer:
         ContentLanguage: =ShowToolTip
         DropShadow: =DropShadow.Light
         Fill: =RGBA(237, 237, 237, 1)
@@ -3927,7 +4019,7 @@
         Y: =185
         ZIndex: =10
 
-        Label7 As label:
+        Label7_3 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -3943,7 +4035,7 @@
             Y: =135
             ZIndex: =1
 
-        TextInput2 As text:
+        TextInput2_5 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -3960,7 +4052,7 @@
             HoverFill: =RGBA(255, 255, 255, 1)
             OnChange: |-
                 =If(
-                    Int(TextInput2) >= Int(TextInput2_2) || Int(TextInput2) >= Int(TextInput2_3),
+                    Int(TextInput2_5) >= Int(TextInput2_6) || Int(TextInput2_5) >= Int(TextInput2_7),
                     Notify(
                         "Estas ingresando un numero mayor en la critica Negra",
                         NotificationType.Error
@@ -3979,7 +4071,7 @@
             Y: =126
             ZIndex: =2
 
-        TextInput2_2 As text:
+        TextInput2_6 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -3996,7 +4088,7 @@
             HoverFill: =RGBA(255, 255, 255, 1)
             OnChange: |-
                 =If(
-                    Int(TextInput2_2) <= Int(TextInput2) || Int(TextInput2_2) >= Int(TextInput2_3),
+                    Int(TextInput2_6) <= Int(TextInput2_5) || Int(TextInput2_6) >= Int(TextInput2_7),
                     Notify(
                         "Estas ingresando un numero mayor en la critica Roja",
                         NotificationType.Error
@@ -4015,7 +4107,7 @@
             Y: =235
             ZIndex: =3
 
-        TextInput2_3 As text:
+        TextInput2_7 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -4032,7 +4124,7 @@
             HoverFill: =RGBA(255, 255, 255, 1)
             OnChange: |-
                 =If(
-                    Int(TextInput2_3) <= Int(TextInput2) || Int(TextInput2_3) <= Int(TextInput2_2),
+                    Int(TextInput2_7) <= Int(TextInput2_5) || Int(TextInput2_7) <= Int(TextInput2_6),
                     Notify(
                         "Estas ingresando un numero mayor en la critica Amarilla",
                         NotificationType.Error
@@ -4051,7 +4143,7 @@
             Y: =345
             ZIndex: =4
 
-        Label7_1 As label:
+        Label7_4 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -4067,7 +4159,7 @@
             Y: =241
             ZIndex: =5
 
-        Label7_2 As label:
+        Label7_5 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -4083,7 +4175,7 @@
             Y: =353
             ZIndex: =6
 
-        Label8 As label:
+        Label8_3 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -4101,14 +4193,14 @@
             X: =158
             ZIndex: =7
 
-        Button5 As button:
+        Button5_5 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             DisplayMode: |-
                 =If(
-                    Int(TextInput2_2.Text) > Int(TextInput2.Text) && Int(TextInput2_2.Text) < Int(TextInput2_3.Text),
+                    Int(TextInput2_6.Text) > Int(TextInput2_5.Text) && Int(TextInput2_6.Text) < Int(TextInput2_7.Text),
                     DisplayMode.Edit,
                     DisplayMode.Disabled
                 )
@@ -4126,9 +4218,9 @@
                     semaforo,
                     LookUp(
                         semaforo,
-                        Color = "Negro" 
+                        Color = "Negro"
                     ),
-                    {Num_dias: Int(TextInput2.Text)}
+                    {Num_dias: Int(TextInput2_5.Text)}
                 );
                 Patch(
                     semaforo,
@@ -4136,7 +4228,7 @@
                         semaforo,
                         Color = "Rojo"
                     ),
-                    {Num_dias: Int(TextInput2_2.Text)}
+                    {Num_dias: Int(TextInput2_6.Text)}
                 );
                 Patch(
                     semaforo,
@@ -4144,7 +4236,7 @@
                         semaforo,
                         Color = "Amarillo"
                     ),
-                    {Num_dias: Int(TextInput2_3.Text)}
+                    {Num_dias: Int(TextInput2_7.Text)}
                 );
                 Set(valorNegro, First(Filter(semaforo, Color = "Negro")).Num_dias);
                 Set(valorRojo, First(Filter(semaforo, Color = "Rojo")).Num_dias);
@@ -4163,7 +4255,7 @@
             Y: =238
             ZIndex: =8
 
-        Icon9 As icon.CancelBadge:
+        Icon9_1 As icon.CancelBadge:
             BorderColor: =RGBA(166, 166, 166, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
@@ -4184,7 +4276,7 @@
             Y: =15
             ZIndex: =10
 
-    Button5_1 As button:
+    Button5_3 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -4195,7 +4287,7 @@
         FontWeight: =FontWeight.Bold
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =
+        HoverFill: =RGBA(166, 166, 166, 1)
         OnSelect: |-
             =UpdateContext({ ShowToolTip: !ShowToolTip })
         PressedBorderColor: =
@@ -4211,7 +4303,7 @@
         Y: =12
         ZIndex: =11
 
-    Slider1 As slider:
+    Slider1_1 As slider:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -4230,54 +4322,74 @@
         ValueFill: =RGBA(102, 102, 102, 1)
         ValueHoverFill: =RGBA(0, 120, 212, 1)
         Width: =1440
-        Y: =976
+        Y: =912
         ZIndex: =12
 
-    Button3 As button:
+    Button5_8 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 120, 212, 1)
+        Fill: =RGBA(66, 75, 90, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
+        FontWeight: =FontWeight.Bold
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |
-            =ForAll(
-                Gallery3.AllItems,
-                Patch(
-                    DCVCOrdeness,
-                    LookUp(
-                        DCVCOrdeness,
-                        nu_orden = Var_NumeroOrden
-                    ),
-                    {
-                        fe_final: DatePicker1_1.SelectedDate,
-                        day_diff: DateDiff(
-                            Today(),
-                            DatePicker1_1.SelectedDate,
-                            TimeUnit.Days
-                        )
-                    }
-                )
-            );
-            Notify(
-                "Fechas actualizadas",
-                NotificationType.Success
-            )
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        HoverFill: =RGBA(166, 166, 166, 1)
+        OnSelect: =Navigate('Pantalla principal')
+        PressedBorderColor: =
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =15
-        Text: ="Botón"
-        X: =603
-        Y: =174
-        ZIndex: =13
+        Text: ="Visualizador de ordenes"
+        Width: =229
+        X: =1056
+        Y: =12
+        ZIndex: =14
+
+    "'Contenedor barra footer_1' As groupContainer.manualLayoutContainer":
+        Height: =77
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1440
+        Y: =947
+        ZIndex: =15
+
+        "'Naviation Center_5' As rectangle":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(66, 75, 90, 1)
+            FocusedBorderThickness: =4
+            Height: =74
+            HoverFill: =
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =1440
+            Y: =3
+            ZIndex: =1
+
+        Image6_7 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =60
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='MicrosoftTeams-image (1)'
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =60
+            X: =1364
+            Y: =10
+            ZIndex: =9
 

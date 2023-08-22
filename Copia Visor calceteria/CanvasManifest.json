@@ -128,12 +128,9 @@
     "UserLocale": "es-ES"
   },
   "ScreenOrder": [
-    "Pantalla principal",
-    "Historial comentarios pantalla",
-    "Notificaciones",
     "Screen2",
     "Reporte",
-    "Pantalla principal_1",
+    "Pantalla principal",
     "vista tabla"
   ]
 }
