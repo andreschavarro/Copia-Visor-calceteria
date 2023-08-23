@@ -1130,8 +1130,7 @@
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Visible: =varRejillaVisible
-        Width: =1355
-        X: =44
+        Width: =1440
         Y: =185
         ZIndex: =5
 
