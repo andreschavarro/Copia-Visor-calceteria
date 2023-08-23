@@ -1157,7 +1157,7 @@
             TemplatePadding: =0
             TemplateSize: =61
             Width: =1400
-            Y: =59
+            Y: =56
             ZIndex: =1
 
             Title2_1 As label:
@@ -1435,11 +1435,12 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
+            Height: =42
             Size: =13
             Text: ="Desarrollador"
-            Width: =267
-            X: =50
-            Y: =19
+            Width: =143
+            X: =104
+            Y: =20
             ZIndex: =2
 
         Icon7_1 As icon.CollapseView:
@@ -1576,9 +1577,10 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
+            Height: =44
             Size: =13
             Text: ="No. solicitud"
-            Width: =149
+            Width: =119
             X: =
             Y: =18
             ZIndex: =10
