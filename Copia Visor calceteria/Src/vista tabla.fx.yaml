@@ -22,7 +22,7 @@
         HeadingFont: =Font.'Segoe UI'
         HeadingFontWeight: =FontWeight.Normal
         HeadingSize: =13
-        Height: =662
+        Height: =743
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(102, 138, 166, 1)
         InputFill: =RGBA(255, 255, 255, 1)
@@ -47,9 +47,9 @@
         SelectedColor: =RGBA(51, 51, 51, 1)
         SelectedFill: =RGBA(128, 128, 128, 1)
         Size: =13
-        Width: =1250
-        X: =41
-        Y: =215
+        Width: =1364
+        X: =34
+        Y: =202
         ZIndex: =1
 
         day_diff_Column1 As dataTableColumn.textualColumn:
@@ -528,11 +528,11 @@
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(66, 75, 90, 1)
             FocusedBorderThickness: =4
-            Height: =75
+            Height: =77
             HoverFill: =
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =1440
-            Y: =2
+            Y: =
             ZIndex: =1
 
         Label1_8 As label:
