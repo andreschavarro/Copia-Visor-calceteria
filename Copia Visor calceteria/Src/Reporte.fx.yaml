@@ -4,12 +4,12 @@ Reporte As screen:
     Width: =1440
 
     "'Contenedor barra navegacion_1' As groupContainer.manualLayoutContainer":
-        Height: =61
+        Height: =58
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Width: =1434
+        Width: =1440
         ZIndex: =1
 
         "'Naviation Center_1' As rectangle":
@@ -19,10 +19,11 @@ Reporte As screen:
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(66, 75, 90, 1)
             FocusedBorderThickness: =4
-            Height: =61
+            Height: =58
             HoverFill: =
             PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =1434
+            Width: =1440
+            Y: =
             ZIndex: =1
 
         Label1_4 As label:
@@ -196,7 +197,7 @@ Reporte As screen:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Width: =1434
+        Width: =1440
         Y: =960
         ZIndex: =3
 
@@ -207,10 +208,12 @@ Reporte As screen:
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(66, 75, 90, 1)
             FocusedBorderThickness: =4
-            Height: =61
+            Height: =64
             HoverFill: =
             PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =1434
+            Width: =1440
+            X: =
+            Y: =
             ZIndex: =1
 
         Image6_6 As image:
