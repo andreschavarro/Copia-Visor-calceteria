@@ -1177,7 +1177,7 @@
                 Text: =ThisItem.de_desarrollador
                 VerticalAlign: =VerticalAlign.Top
                 Width: =210
-                X: =80
+                X: =Subtitle1_1.X+Subtitle1_1.Width
                 Y: =5
                 ZIndex: =1
 
@@ -1216,7 +1216,7 @@
                 Text: =ThisItem.centro_proceso
                 VerticalAlign: =VerticalAlign.Top
                 Width: =133
-                X: =458
+                X: =Title2_7.X+Title2_7.Width
                 ZIndex: =4
 
             DatePicker1_2 As datepicker:
@@ -1253,7 +1253,7 @@
                 Size: =13
                 Tooltip: =
                 Width: =133
-                X: =1179
+                X: =Label13_1.X+Label13_1.Width
                 Y: =10
                 ZIndex: =5
 
@@ -1293,7 +1293,7 @@
                 PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =37
-                X: =1312
+                X: =DatePicker1_2.X+DatePicker1_2.Width
                 Y: =7
                 ZIndex: =6
 
@@ -1311,7 +1311,7 @@
                 Size: =13
                 Text: =CountIf(DCVCOrdeness, nom_recurso = ThisItem.nom_recurso)
                 Width: =59
-                X: =1110
+                X: =Label11_2.X+Label11_2.Width
                 Y: =17
                 ZIndex: =7
 
@@ -1346,7 +1346,7 @@
                         ) 
                     )
                 Width: =143
-                X: =924
+                X: =Title2_6.X+Title2_6.Width
                 Y: =10
                 ZIndex: =8
 
@@ -1385,7 +1385,7 @@
                     )
                 VerticalAlign: =VerticalAlign.Top
                 Width: =227
-                X: =697
+                X: =Label15.X+Label15.Width
                 Y: =12
                 ZIndex: =9
 
@@ -1427,7 +1427,7 @@
                 Text: =ThisItem.de_cliente
                 VerticalAlign: =VerticalAlign.Top
                 Width: =119
-                X: =320
+                X: =Title2_1.X+Title2_1.Width
                 ZIndex: =11
 
             Label15 As label:
@@ -1444,7 +1444,7 @@
                 Size: =13
                 Text: =ThisItem.grupo_proceso
                 Width: =80
-                X: =633
+                X: =Title2_5.X+Title2_5.Width
                 ZIndex: =12
 
         Label9_12 As label:
@@ -1457,11 +1457,11 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =42
+            Height: =37
             Size: =13
             Text: ="Desarrollador"
-            Width: =143
-            X: =104
+            Width: =160
+            X: =Label9_1.X+Label9_1.Width
             Y: =20
             ZIndex: =2
 
@@ -1501,7 +1501,7 @@
             Size: =13
             Text: ="Fecha"
             Width: =110
-            X: =1202
+            X: =Label9_11.X+Label9_11.Width
             Y: =16
             ZIndex: =4
 
@@ -1518,7 +1518,7 @@
             Size: =13
             Text: ="Proceso"
             Width: =114
-            X: =463
+            X: =Label9_14.X+Label9_14.Width
             Y: =17
             ZIndex: =5
 
@@ -1550,7 +1550,7 @@
             Size: =13
             Text: ="Recurso"
             Width: =149
-            X: =728
+            X: =Label9_15.X+Label9_15.Width
             Y: =14
             ZIndex: =7
 
@@ -1568,7 +1568,7 @@
             Size: =13
             Text: ="Última Fecha"
             Width: =144
-            X: =930
+            X: =Label9_9.X+Label9_9.Width
             Y: =14
             ZIndex: =8
 
@@ -1586,7 +1586,7 @@
             Size: =13
             Text: ="Solicitudes recurso"
             Width: =119
-            X: =1083
+            X: =Label9_10.X+Label9_10.Width
             Y: =20
             ZIndex: =9
 
@@ -1599,10 +1599,10 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =44
+            Height: =38
             Size: =13
             Text: ="No. solicitud"
-            Width: =119
+            Width: =136
             X: =
             Y: =18
             ZIndex: =10
@@ -1617,11 +1617,11 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =41
+            Height: =44
             Size: =13
             Text: ="Cliente"
-            Width: =181
-            X: =263
+            Width: =158
+            X: =Label9_12.X+Label9_12.Width
             Y: =18
             ZIndex: =11
 
@@ -1638,7 +1638,7 @@
             Size: =13
             Text: ="Grupo Proceso"
             Width: =133
-            X: =577
+            X: =Label9_13.X+Label9_13.Width
             Y: =20
             ZIndex: =12
 
