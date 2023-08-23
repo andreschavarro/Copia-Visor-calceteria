@@ -1244,33 +1244,9 @@
                 HoverDateFill: =RGBA(200, 200, 200, 1)
                 IconBackground: =RGBA(66, 75, 90, 100)
                 IsEditable: =true
-                OnChange: |+
+                OnChange: |
                     =UpdateContext({fechaHover:DatePicker1_2.SelectedDate});
-                    
-                OnSelect: =
-                PaddingTop: =5
-                SelectedDateFill: =RGBA(0, 120, 212, 1)
-                Size: =13
-                Tooltip: =
-                Width: =133
-                X: =Label13_1.X+Label13_1.Width
-                Y: =10
-                ZIndex: =5
-
-            Icon6_3 As icon.Send:
-                BorderColor: =RGBA(66, 75, 90, 1)
-                Color: =RGBA(66, 75, 90, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(220, 220, 220, 1)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                FocusedBorderThickness: =4
-                Height: =37
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =
-                HoverFill: =RGBA(0, 0, 0, 0)
-                Icon: =Icon.Save
-                OnSelect: |-
-                    =Patch(
+                    Patch(
                         DCVCOrdeness,
                         LookUp(
                             DCVCOrdeness,
@@ -1289,13 +1265,15 @@
                         "Fecha actualizada",
                         NotificationType.Success
                     )
-                PressedBorderColor: =RGBA(0, 0, 0, 0)
-                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                PressedFill: =RGBA(0, 0, 0, 0)
-                Width: =37
-                X: =DatePicker1_2.X+DatePicker1_2.Width
-                Y: =7
-                ZIndex: =6
+                OnSelect: =
+                PaddingTop: =5
+                SelectedDateFill: =RGBA(0, 120, 212, 1)
+                Size: =13
+                Tooltip: =
+                Width: =133
+                X: =Label13_1.X+Label13_1.Width
+                Y: =10
+                ZIndex: =5
 
             Label13_1 As label:
                 Align: =Align.Center
