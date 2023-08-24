@@ -1168,7 +1168,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =39
+                Height: =42
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -1176,8 +1176,8 @@
                 PaddingTop: =0
                 Text: =ThisItem.de_desarrollador
                 VerticalAlign: =VerticalAlign.Top
-                Width: =210
-                X: =Subtitle1_1.X+Subtitle1_1.Width
+                Width: =146
+                X: =121
                 Y: =5
                 ZIndex: =1
 
@@ -1213,10 +1213,11 @@
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Text: =ThisItem.centro_proceso
+                Text: =ThisItem.nom_recurso
                 VerticalAlign: =VerticalAlign.Top
-                Width: =133
-                X: =Title2_7.X+Title2_7.Width
+                Width: =184
+                X: =466
+                Y: =1
                 ZIndex: =4
 
             DatePicker1_2 As datepicker:
@@ -1271,8 +1272,8 @@
                 Size: =13
                 Tooltip: =
                 Width: =133
-                X: =Label13_1.X+Label13_1.Width
-                Y: =10
+                X: =1236
+                Y: =19
                 ZIndex: =5
 
             Label13_1 As label:
@@ -1289,8 +1290,8 @@
                 Size: =13
                 Text: =CountIf(DCVCOrdeness, nom_recurso = ThisItem.nom_recurso)
                 Width: =59
-                X: =Label11_2.X+Label11_2.Width
-                Y: =17
+                X: =1119
+                Y: =25
                 ZIndex: =7
 
             Label11_2 As label:
@@ -1324,8 +1325,8 @@
                         ) 
                     )
                 Width: =143
-                X: =Title2_6.X+Title2_6.Width
-                Y: =10
+                X: =953
+                Y: =11
                 ZIndex: =8
 
             Title2_6 As label:
@@ -1336,13 +1337,13 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =48
+                Height: =36
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Text: =ThisItem.nom_recurso
+                Text: =ThisItem.fe_entrega
                 Tooltip: |-
                     ="Última fecha asignada: " & If(
                         CountIf(
@@ -1362,9 +1363,9 @@
                         )
                     )
                 VerticalAlign: =VerticalAlign.Top
-                Width: =227
-                X: =Label15.X+Label15.Width
-                Y: =12
+                Width: =121
+                X: =843
+                Y: =17
                 ZIndex: =9
 
             Subtitle1_1 As label:
@@ -1390,6 +1391,7 @@
                 ZIndex: =10
 
             Title2_7 As label:
+                Align: =Align.Center
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
@@ -1402,10 +1404,11 @@
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Text: =ThisItem.de_cliente
+                Text: =ThisItem.centro_proceso
                 VerticalAlign: =VerticalAlign.Top
                 Width: =119
-                X: =Title2_1.X+Title2_1.Width
+                X: =301
+                Y: =5
                 ZIndex: =11
 
             Label15 As label:
@@ -1417,12 +1420,13 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =42
+                Height: =60
                 OnSelect: =Select(Parent)
                 Size: =13
-                Text: =ThisItem.grupo_proceso
-                Width: =80
-                X: =Title2_5.X+Title2_5.Width
+                Text: =ThisItem.de_cliente
+                Width: =147
+                X: =696
+                Y: =1
                 ZIndex: =12
 
         Label9_12 As label:
@@ -1439,8 +1443,8 @@
             Size: =13
             Text: ="Desarrollador"
             Width: =160
-            X: =Label9_1.X+Label9_1.Width
-            Y: =20
+            X: =112
+            Y: =21
             ZIndex: =2
 
         Icon7_1 As icon.CollapseView:
@@ -1479,11 +1483,12 @@
             Size: =13
             Text: ="Fecha"
             Width: =110
-            X: =Label9_11.X+Label9_11.Width
-            Y: =16
+            X: =1228
+            Y: =22
             ZIndex: =4
 
         Label9_13 As label:
+            Align: =Align.Center
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -1494,10 +1499,10 @@
             FontWeight: =FontWeight.Bold
             Height: =39
             Size: =13
-            Text: ="Proceso"
+            Text: ="Recurso"
             Width: =114
-            X: =Label9_14.X+Label9_14.Width
-            Y: =17
+            X: =507
+            Y: =13
             ZIndex: =5
 
         Rectangle5_2 As rectangle:
@@ -1526,10 +1531,10 @@
             FontWeight: =FontWeight.Bold
             Height: =43
             Size: =13
-            Text: ="Recurso"
-            Width: =149
-            X: =Label9_15.X+Label9_15.Width
-            Y: =14
+            Text: ="Fecha de entrega"
+            Width: =115
+            X: =827
+            Y: =13
             ZIndex: =7
 
         Label9_10 As label:
@@ -1542,12 +1547,11 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =42
+            Height: =62
             Size: =13
-            Text: ="Última Fecha"
-            Width: =144
-            X: =Label9_9.X+Label9_9.Width
-            Y: =14
+            Text: ="Fecha max de envio por recurso"
+            Width: =162
+            X: =942
             ZIndex: =8
 
         Label9_11 As label:
@@ -1564,8 +1568,8 @@
             Size: =13
             Text: ="Solicitudes recurso"
             Width: =119
-            X: =Label9_10.X+Label9_10.Width
-            Y: =20
+            X: =1089
+            Y: =7
             ZIndex: =9
 
         Label9_1 As label:
@@ -1595,15 +1599,16 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =44
+            Height: =38
             Size: =13
-            Text: ="Cliente"
-            Width: =158
-            X: =Label9_12.X+Label9_12.Width
+            Text: ="Estado"
+            Width: =138
+            X: =296
             Y: =18
             ZIndex: =11
 
         Label9_15 As label:
+            Align: =Align.Center
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             Color: =RGBA(51, 51, 51, 1)
@@ -1612,12 +1617,12 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =39
+            Height: =41
             Size: =13
-            Text: ="Grupo Proceso"
-            Width: =133
-            X: =Label9_13.X+Label9_13.Width
-            Y: =20
+            Text: ="Cliente"
+            Width: =101
+            X: =695
+            Y: =16
             ZIndex: =12
 
     Label10_2 As label:
