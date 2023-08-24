@@ -128,9 +128,8 @@
     "UserLocale": "es-ES"
   },
   "ScreenOrder": [
-    "Screen2",
-    "Reporte",
     "Pantalla principal",
+    "Reporte",
     "vista tabla"
   ]
 }

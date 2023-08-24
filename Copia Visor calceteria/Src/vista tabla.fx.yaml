@@ -22,7 +22,7 @@
         HeadingFont: =Font.'Segoe UI'
         HeadingFontWeight: =FontWeight.Normal
         HeadingSize: =13
-        Height: =743
+        Height: =786
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(102, 138, 166, 1)
         InputFill: =RGBA(255, 255, 255, 1)
@@ -47,8 +47,8 @@
         SelectedColor: =RGBA(51, 51, 51, 1)
         SelectedFill: =RGBA(204, 204, 204, 1)
         Size: =13
-        Width: =1364
-        X: =34
+        Width: =1344
+        X: =54
         Y: =202
         ZIndex: =1
 
@@ -717,46 +717,4 @@
             X: =851
             Y: =63
             ZIndex: =12
-
-    "'Contenedor barra footer_2' As groupContainer.manualLayoutContainer":
-        Height: =79
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Width: =1440
-        Y: =945
-        ZIndex: =15
-
-        "'Naviation Center_6' As rectangle":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(66, 75, 90, 1)
-            FocusedBorderThickness: =4
-            Height: =67
-            HoverFill: =
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =1440
-            Y: =10
-            ZIndex: =1
-
-        Image6_8 As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =60
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: ='MicrosoftTeams-image (1)'
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =60
-            X: =1364
-            Y: =10
-            ZIndex: =9
 
