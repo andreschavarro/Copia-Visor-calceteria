@@ -1219,6 +1219,21 @@
                     Y: =77
                     ZIndex: =21
 
+                Label1 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Size: =13
+                    Text: =ThisItem.critica
+                    X: =141
+                    Y: =93
+                    ZIndex: =22
+
     "'Contenedor galeria rejilla_1' As groupContainer.manualLayoutContainer":
         Height: =839
         RadiusBottomLeft: =4
@@ -1342,8 +1357,48 @@
                 HoverDateFill: =RGBA(200, 200, 200, 1)
                 IconBackground: =RGBA(66, 75, 90, 100)
                 IsEditable: =true
-                OnChange: |
-                    =UpdateContext({fechaHover:DatePicker1_2.SelectedDate});
+                OnChange: |-
+                    =UpdateContext({fechaHover: DatePicker1_2.SelectedDate});
+                    Set(
+                        varDiasDiff,
+                        DateDiff(
+                            Today(),
+                            DatePicker1_2.SelectedDate,
+                            TimeUnit.Days
+                        )
+                    );
+                    Set(
+                        varCritica,
+                        If(
+                            ThisItem.centro_proceso = "GRAFICADOR" || ThisItem.centro_proceso = "GRAFICADO ESCALADOS",
+                            If(
+                                varDiasDiff <= 9,
+                                "Negro",
+                                If(
+                                    varDiasDiff <= 10,
+                                    "Rojo",
+                                    If(
+                                        varDiasDiff <= 11,
+                                        "Amarillo",
+                                        "Verde"
+                                    )
+                                )
+                            ),
+                            If(
+                                varDiasDiff <= -1,
+                                "Negro",
+                                If(
+                                    varDiasDiff <= 2,
+                                    "Rojo",
+                                    If(
+                                        varDiasDiff <= 5,
+                                        "Amarillo",
+                                        "Verde"
+                                    )
+                                )
+                            )
+                        )
+                    );
                     Patch(
                         DCVCOrdeness,
                         LookUp(
@@ -1352,11 +1407,8 @@
                         ),
                         {
                             fe_final: DatePicker1_2.SelectedDate,
-                            day_diff: DateDiff(
-                                Today(),
-                                DatePicker1_2.SelectedDate,
-                                TimeUnit.Days
-                            )
+                            day_diff: varDiasDiff,
+                            critica: varCritica
                         }
                     );
                     Notify(
