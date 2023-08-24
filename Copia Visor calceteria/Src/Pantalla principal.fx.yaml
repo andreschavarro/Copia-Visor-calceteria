@@ -1124,7 +1124,7 @@
                     ZIndex: =20
 
     "'Contenedor galeria rejilla_1' As groupContainer.manualLayoutContainer":
-        Height: =725
+        Height: =839
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -1138,7 +1138,7 @@
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =666
+            Height: =749
             Items: |+
                 =SortByColumns(
                     Filter(
@@ -1156,8 +1156,9 @@
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
             TemplateSize: =61
-            Width: =1400
-            Y: =56
+            Width: =1407
+            X: =17
+            Y: =62
             ZIndex: =1
 
             Title2_1 As label:
@@ -1216,7 +1217,7 @@
                 Text: =ThisItem.nom_recurso
                 VerticalAlign: =VerticalAlign.Top
                 Width: =220
-                X: =466
+                X: =523
                 Y: =1
                 ZIndex: =4
 
@@ -1368,7 +1369,7 @@
                 Text: =ThisItem.centro_proceso
                 VerticalAlign: =VerticalAlign.Top
                 Width: =151
-                X: =301
+                X: =315
                 Y: =5
                 ZIndex: =11
 
@@ -1405,8 +1406,8 @@
             Size: =13
             Text: ="Desarrollador"
             Width: =160
-            X: =112
-            Y: =21
+            X: =136
+            Y: =18
             ZIndex: =2
 
         Icon7_1 As icon.CollapseView:
@@ -1463,8 +1464,8 @@
             Size: =13
             Text: ="Recurso"
             Width: =114
-            X: =507
-            Y: =13
+            X: =582
+            Y: =11
             ZIndex: =5
 
         Rectangle5_2 As rectangle:
@@ -1477,7 +1478,8 @@
             Height: =1
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =1400
+            Width: =1407
+            X: =17
             Y: =57
             ZIndex: =6
 
@@ -1495,7 +1497,7 @@
             Size: =13
             Text: ="Fecha max de envio por recurso"
             Width: =162
-            X: =907
+            X: =927
             ZIndex: =8
 
         Label9_11 As label:
@@ -1528,8 +1530,8 @@
             Height: =38
             Size: =13
             Text: ="No. solicitud"
-            Width: =136
-            X: =
+            Width: =118
+            X: =17
             Y: =18
             ZIndex: =10
 
@@ -1547,7 +1549,7 @@
             Size: =13
             Text: ="Estado"
             Width: =138
-            X: =296
+            X: =332
             Y: =18
             ZIndex: =11
 
@@ -1565,8 +1567,8 @@
             Size: =13
             Text: ="Cliente"
             Width: =101
-            X: =731
-            Y: =16
+            X: =775
+            Y: =8
             ZIndex: =12
 
     Label10_2 As label:
