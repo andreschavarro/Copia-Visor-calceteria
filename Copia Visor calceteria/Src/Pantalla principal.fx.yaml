@@ -1123,6 +1123,102 @@
                     Y: =21
                     ZIndex: =20
 
+                Button2_4 As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: |-
+                        =If(
+                            ThisItem.centro_proceso = "GRAFICADOR" || ThisItem.centro_proceso = "GRAFICADO ESCALADOS",
+                            If(
+                                ThisItem.day_diff <= 9,
+                                RGBA(
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ),
+                                If(
+                                    ThisItem.day_diff <= 10,
+                                    RGBA(
+                                        255,
+                                        0,
+                                        0,
+                                        1
+                                    ),
+                                    If(
+                                        ThisItem.day_diff <= 11,
+                                        RGBA(
+                                            255,
+                                            255,
+                                            0,
+                                            1
+                                        ),
+                                        RGBA(
+                                            54,
+                                            176,
+                                            75,
+                                            1
+                                        )
+                                    )
+                                )
+                            ),
+                            If(
+                                ThisItem.day_diff <= -1,
+                                RGBA(
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ),
+                                If(
+                                    ThisItem.day_diff <= 2,
+                                    RGBA(
+                                        255,
+                                        0,
+                                        0,
+                                        1
+                                    ),
+                                    If(
+                                        ThisItem.day_diff <= 5,
+                                        RGBA(
+                                            255,
+                                            255,
+                                            0,
+                                            1
+                                        ),
+                                        RGBA(
+                                            54,
+                                            176,
+                                            75,
+                                            1
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =20
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =
+                    PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    RadiusBottomLeft: =25
+                    RadiusBottomRight: =25
+                    RadiusTopLeft: =25
+                    RadiusTopRight: =25
+                    Size: =15
+                    Text: =""
+                    Width: =20
+                    X: =272
+                    Y: =77
+                    ZIndex: =21
+
     "'Contenedor galeria rejilla_1' As groupContainer.manualLayoutContainer":
         Height: =839
         RadiusBottomLeft: =4
