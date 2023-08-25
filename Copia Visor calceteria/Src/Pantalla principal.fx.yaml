@@ -1345,13 +1345,13 @@
                                 )
                             ),
                             If(
-                                varDiasDiff <= -1,
+                                varDiasDiff <= valorNegro,
                                 "Negro",
                                 If(
-                                    varDiasDiff <= 2,
+                                    varDiasDiff <= valorRojo,
                                     "Rojo",
                                     If(
-                                        varDiasDiff <= 5,
+                                        varDiasDiff <= valorAmarillo,
                                         "Amarillo",
                                         "Verde"
                                     )
@@ -4083,6 +4083,7 @@
             Fill: =RGBA(219, 219, 219, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
             Format: =TextFormat.Number
             Height: =58
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4116,6 +4117,7 @@
             Fill: =RGBA(219, 219, 219, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
             Format: =TextFormat.Number
             Height: =58
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4149,6 +4151,7 @@
             Fill: =RGBA(219, 219, 219, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
             Format: =TextFormat.Number
             Height: =58
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4344,6 +4347,7 @@
             Fill: =RGBA(219, 219, 219, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
             Format: =TextFormat.Number
             Height: =58
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4377,6 +4381,7 @@
             Fill: =RGBA(219, 219, 219, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
             Format: =TextFormat.Number
             Height: =58
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4410,6 +4415,7 @@
             Fill: =RGBA(219, 219, 219, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
             Height: =49
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
