@@ -67,15 +67,21 @@
             ZIndex: =1
 
         nu_orden_Columna1 As dataTableColumn.textualColumn:
+            AutoWidth: |
+                =true
+            ContentLanguage: =
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="ORDEN"
             FieldName: ="cr59d_nu_orden"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
+            OnSelect: =
             Order: =3
             Text: =ThisItem.nu_orden
-            Width: =100
+            Visible: |
+                =true
+            Width: =0
             X: =0
             Y: =0
             ZIndex: =3
@@ -210,13 +216,15 @@
             ZIndex: =15
 
         cantidad_colores_Columna1 As dataTableColumn.textualColumn:
+            ContentLanguage: =Align.Center
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="COLORES"
             FieldName: ="cr59d_cantidad_colores"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            Order: =4
+            OnSelect: =
+            Order: =4 
             Text: =ThisItem.cantidad_colores
             Width: =100
             X: =0
