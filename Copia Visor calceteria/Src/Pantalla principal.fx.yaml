@@ -1062,101 +1062,52 @@
                     Y: =156
                     ZIndex: =19
 
-                Button2_2 As button:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: |-
-                        =If(
-                            ThisItem.day_diff <= Int(valorNegro),
-                            RGBA(
-                                0,
-                                0,
-                                0,
-                                1
-                            ),
-                            If(
-                                ThisItem.day_diff <= Int(valorRojo),
-                                RGBA(
-                                    255,
-                                    0,
-                                    0,
-                                    1
-                                ),
-                                If(
-                                    ThisItem.day_diff <= Int(valorAmarillo),
-                                    RGBA(
-                                        255,
-                                        255,
-                                        0,
-                                        1
-                                    ),
-                                    RGBA(
-                                        54,
-                                        176,
-                                        75,
-                                        1
-                                    )
-                                )
-                            )
-                        )
-                        //DateDiff(Today();DateValue(ThisItem.fecha_fin_original)) 
-                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =20
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =
-                    PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-                    PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                    RadiusBottomLeft: =25
-                    RadiusBottomRight: =25
-                    RadiusTopLeft: =25
-                    RadiusTopRight: =25
-                    Size: =15
-                    Text: =""
-                    Width: =20
-                    X: =74
-                    Y: =21
-                    ZIndex: =20
-
                 Button2_4 As button:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: |
-                        =Switch(
-                            ThisItem.centro_proceso,
-                            "GRAFICADOR",
+                    Fill: |-
+                        =/*Switch(
+                            ThisItem.centro_proceso;
+                            "GRAFICADOR";
                             Switch(
-                                true,
-                                IsBlank(ThisItem.day_diff) || ThisItem.day_diff = 0, ColorValue("Beige"),
-                                ThisItem.day_diff <= Int(valorNegroGraficador), RGBA(0, 0, 0, 1),
-                                ThisItem.day_diff <= Int(valorRojoGraficador), RGBA(255, 0, 0, 1),
-                                ThisItem.day_diff <= Int(valorAmarilloGraficador), RGBA(255, 255, 0, 1),
-                                true, RGBA(54, 176, 75, 1)
-                            ),
-                            "GRAFICADO ESCALADOS",
+                                true;
+                                IsBlank(ThisItem.day_diff) || ThisItem.day_diff = 0; ColorValue("Beige");
+                                ThisItem.day_diff <= Int(valorNegroGraficador); RGBA(0; 0; 0; 1);
+                                ThisItem.day_diff <= Int(valorRojoGraficador); RGBA(255; 0; 0; 1);
+                                ThisItem.day_diff <= Int(valorAmarilloGraficador); RGBA(255; 255; 0; 1);
+                                true; RGBA(54; 176; 75; 1)
+                            );
+                            "GRAFICADO ESCALADOS";
                             Switch(
-                                true,
-                                IsBlank(ThisItem.day_diff) || ThisItem.day_diff = 0, ColorValue("Beige"),
-                                ThisItem.day_diff <= Int(valorNegroGraficador), RGBA(0, 0, 0, 1),
-                                ThisItem.day_diff <= Int(valorRojoGraficador), RGBA(255, 0, 0, 1),
-                                ThisItem.day_diff <= Int(valorAmarilloGraficador), RGBA(255, 255, 0, 1),
-                                true, RGBA(54, 176, 75, 1)
-                            ),
+                                true;
+                                IsBlank(ThisItem.day_diff) || ThisItem.day_diff = 0; ColorValue("Beige");
+                                ThisItem.day_diff <= Int(valorNegroGraficador); RGBA(0; 0; 0; 1);
+                                ThisItem.day_diff <= Int(valorRojoGraficador); RGBA(255; 0; 0; 1);
+                                ThisItem.day_diff <= Int(valorAmarilloGraficador); RGBA(255; 255; 0; 1);
+                                true; RGBA(54; 176; 75; 1)
+                            );
                             Switch(
-                                true,
-                                IsBlank(ThisItem.day_diff) || ThisItem.day_diff = 0, ColorValue("Beige"),
-                                ThisItem.day_diff <=-1/*Int(valorNegro);*/, RGBA(0, 0, 0, 1),
-                                ThisItem.day_diff <= 2/*Int(valorRojo)*/, RGBA(255, 0, 0, 1),
-                                ThisItem.day_diff <= 5/*Int(valorAmarillo)*/, RGBA(255, 255, 0, 1),
-                                true, RGBA(54, 176, 75, 1)
+                                true;
+                                IsBlank(ThisItem.day_diff) || ThisItem.day_diff = 0; ColorValue("Beige");
+                                ThisItem.day_diff <=-1; RGBA(0; 0; 0; 1);
+                                ThisItem.day_diff <= 2; RGBA(255; 0; 0; 1);
+                                ThisItem.day_diff <= 5; RGBA(255; 255; 0; 1);
+                                true; RGBA(54; 176; 75; 1)
                             )
+                        )*/
+                        Switch(
+                            ThisItem.critica,
+                            "Verde",
+                            ColorValue("Green"),
+                            "Amarillo",
+                            ColorValue("Yellow"),
+                            "Rojo",
+                            ColorValue("Red"),
+                            "Negro",
+                            ColorValue("Black"),
+                            ColorValue("Beige")
                         )
                     FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                     Font: =Font.'Segoe UI'
@@ -1175,24 +1126,9 @@
                     Size: =15
                     Text: =""
                     Width: =20
-                    X: =272
-                    Y: =77
+                    X: =81
+                    Y: =21
                     ZIndex: =21
-
-                Label1 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    Size: =13
-                    Text: =ThisItem.critica
-                    X: =141
-                    Y: =93
-                    ZIndex: =22
 
     "'Contenedor galeria rejilla_1' As groupContainer.manualLayoutContainer":
         Height: =839

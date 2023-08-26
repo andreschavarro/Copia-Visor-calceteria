@@ -40,7 +40,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AGUJAS_Columna1",
-      "ParentIndex": 9,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1664,7 +1664,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "cantidad_colores_Columna1",
-      "ParentIndex": 1,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1774,7 +1774,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "centro_proceso_Columna2",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3771,7 +3771,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "day_diff_Column1",
-      "ParentIndex": 13,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3871,7 +3871,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "de_cliente_Columna2",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3971,7 +3971,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "de_desarrollador_Columna2",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4072,7 +4072,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "de_ejecutiva_Columna1",
-      "ParentIndex": 4,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4383,7 +4383,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "grupo_proceso_Columna1",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6363,7 +6363,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "nom_recurso_Columna2",
-      "ParentIndex": 7,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6472,7 +6472,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "nu_orden_Columna1",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6600,7 +6600,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "num_recursos_Columna1",
-      "ParentIndex": 11,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6851,7 +6851,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tipo_muestra_Columna1",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
