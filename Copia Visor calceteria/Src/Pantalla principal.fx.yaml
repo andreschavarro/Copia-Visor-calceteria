@@ -8,10 +8,10 @@
     "'Contenedor Combox filtros_1' As groupContainer.manualLayoutContainer":
         BorderColor: =RGBA(255, 255, 255, 1)
         BorderStyle: =BorderStyle.None
-        Height: =76
-        Width: =1116
-        X: =26
-        Y: =88
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =183
+        Width: =1142
+        Y: =77
         ZIndex: =1
 
         InputNoOrden_1 As text:
@@ -107,7 +107,8 @@
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
             Size: =13
-            Width: =370
+            Width: =358
+            X: =12
             Y: =20
             ZIndex: =9
 
@@ -129,7 +130,6 @@
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Recurso"
-            IsSearchable: =false
             Items: =Distinct(DCVCOrdeness,nom_recurso)
             OnChange: =Set(Var_Recurso,ComboBoxRecurso_1.Selected.Value)
             OnSelect: =Set(Var_Recurso,ComboBoxRecurso_1.Selected.Value)
@@ -137,7 +137,7 @@
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
-            SearchItems: =[]
+            SearchItems: =Search(Distinct(DCVCOrdeness,nom_recurso),ComboBoxRecurso_1.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
             Size: =13
@@ -296,42 +296,15 @@
             Y: =14
             ZIndex: =11
 
-    Label10_3 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(66, 75, 90, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =1
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =50
-        Size: =30
-        Text: |-
-            =CountRows(Filter(
-                    DCVCOrdeness,
-                    IsBlank(Var_Desarrollador) || de_desarrollador = Var_Desarrollador,
-                    IsBlank(Var_NumeroOrden) || nu_orden = Var_NumeroOrden,
-                    IsBlank(Var_Recurso) || nom_recurso = Var_Recurso,
-                    IsBlank(Var_Critica) || ((Var_Critica = "Verde" && day_diff > Int(valorAmarillo)) || (Var_Critica = "Amarillo" && day_diff > Int(valorRojo) && day_diff <= Int  (valorAmarillo)) || (Var_Critica = "Rojo" && day_diff > Int(valorNegro) && day_diff <= Int(valorRojo)) || (Var_Critica = "Negro" && day_diff <= Int(valorNegro)))
-            ))
-        Width: =90
-        X: =1260
-        Y: =124
-        ZIndex: =3
-
     "'Contenedor galeria tarjetas_1' As groupContainer.manualLayoutContainer":
-        Height: =813
+        Height: =764
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Visible: =varTarjetaVisible
-        Width: =1400
-        X: =14
-        Y: =174
+        Width: =1440
+        Y: =260
         ZIndex: =4
 
         Icon4_1 As icon.OptionsList:
@@ -353,7 +326,7 @@
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =45
-            X: =1348
+            X: =1370
             Y: =5
             ZIndex: =2
 
@@ -374,7 +347,7 @@
         "'Galeria todas las solicitudes_1' As gallery.galleryVertical":
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =712
+            Height: =715
             Items: |-
                 =SortByColumns(
                     Filter(
@@ -390,7 +363,7 @@
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplateSize: =205
-            Width: =1400
+            Width: =1440
             WrapCount: |
                 =4
             Y: =46
@@ -1131,21 +1104,21 @@
                     ZIndex: =21
 
     "'Contenedor galeria rejilla_1' As groupContainer.manualLayoutContainer":
-        Height: =839
+        Height: =764
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Visible: =varRejillaVisible
         Width: =1440
-        Y: =185
+        Y: =260
         ZIndex: =5
 
         "Gallery3_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =749
+            Height: =701
             Items: |+
                 =SortByColumns(
                     Filter(
@@ -1153,7 +1126,7 @@
                         IsBlank(Var_Desarrollador) || de_desarrollador = Var_Desarrollador,
                         IsBlank(Var_NumeroOrden) || nu_orden = Var_NumeroOrden,
                         IsBlank(Var_Recurso) || nom_recurso = Var_Recurso,
-                        IsBlank(Var_Critica) || ((Var_Critica = "Verde" && day_diff > Int(valorAmarillo)) || (Var_Critica = "Amarillo" && day_diff > Int(valorRojo) && day_diff <= Int(valorAmarillo)) || (Var_Critica = "Rojo" && day_diff > Int(valorNegro) && day_diff <= Int(valorRojo)) || (Var_Critica = "Negro" && day_diff <= Int(valorNegro)))
+                        IsBlank(Var_Critica) || critica = Var_Critica
                     ),
                     "cr59d_day_diff",
                     SortOrder.Ascending
@@ -1163,8 +1136,8 @@
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
             TemplateSize: =61
-            Width: =1407
-            X: =17
+            Width: =1437
+            X: =3
             Y: =62
             ZIndex: =1
 
@@ -1192,20 +1165,11 @@
             Separator1_1 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 Fill: =RGBA(128, 128, 128, 1)
-                Height: =2
+                Height: =1
                 OnSelect: =Select(Parent)
                 Width: =Parent.TemplateWidth
                 Y: =58
                 ZIndex: =2
-
-            Rectangle2_1 As rectangle:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                Height: =Parent.TemplateHeight - Separator1_1.Height
-                OnSelect: =Select(Parent)
-                Visible: =ThisItem.IsSelected
-                Width: =4
-                ZIndex: =3
 
             Title2_5 As label:
                 Align: =Align.Center
@@ -1431,7 +1395,7 @@
                 OnSelect: =Select(Parent)
                 Size: =13
                 Text: =ThisItem.de_cliente
-                Width: =183
+                Width: =197
                 X: =728
                 Y: =1
                 ZIndex: =12
@@ -1473,8 +1437,8 @@
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =45
-            X: =1355
-            Y: =
+            X: =1368
+            Y: =8
             ZIndex: =3
 
         Label9_8 As label:
@@ -1614,90 +1578,6 @@
             X: =775
             Y: =8
             ZIndex: =12
-
-    Label10_2 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =25
-        Text: ="Cantidad de ordenes actuales"
-        Width: =276
-        X: =1142
-        Y: =88
-        ZIndex: =6
-
-    Button1_1 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: |-
-            =If(
-                CountIf(
-                    DCVCOrdeness,
-                    true
-                ) <= 220,
-                RGBA(
-                    54,
-                    176,
-                    75,
-                    1
-                ),
-                If(
-                    CountIf(
-                        DCVCOrdeness,
-                        true
-                    ) > 220 && CountIf(
-                        DCVCOrdeness,
-                        true
-                    ) <= 260,
-                    RGBA(
-                        255,
-                        255,
-                        0,
-                        1
-                    ),
-                    If(
-                        CountIf(
-                            DCVCOrdeness,
-                            true
-                        ) > 260,
-                        RGBA(
-                            255,
-                            0,
-                            0,
-                            1
-                        )
-                    )
-                )
-            )
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =50
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =25
-        RadiusBottomRight: =25
-        RadiusTopLeft: =25
-        RadiusTopRight: =25
-        Size: =15
-        Text: =""
-        Width: =50
-        X: =1210
-        Y: =124
-        ZIndex: =7
 
     "'Contenedor Detalle Imagen_1' As groupContainer.manualLayoutContainer":
         DropShadow: =DropShadow.Light
@@ -4471,4 +4351,63 @@
         X: =1056
         Y: =12
         ZIndex: =14
+
+    "'Container cantidad orden' As groupContainer.manualLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(219, 219, 219, 1)
+        Height: =183
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =298
+        X: =1142
+        Y: =77
+        ZIndex: =15
+
+        Label10_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =83
+            Text: ="Cantidad de ordenes actuales"
+            Width: =196
+            X: =64
+            Y: =16
+            ZIndex: =1
+
+        Label10_3 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(66, 75, 90, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =50
+            Size: =30
+            Text: |-
+                =CountRows(
+                    Filter(
+                        DCVCOrdeness,
+                        IsBlank(Var_Desarrollador) || de_desarrollador = Var_Desarrollador,
+                        IsBlank(Var_NumeroOrden) || nu_orden = Var_NumeroOrden,
+                        IsBlank(Var_Recurso) || nom_recurso = Var_Recurso,
+                        IsBlank(Var_Critica) || critica = Var_Critica
+                    )
+                )
+            Width: =90
+            X: =117
+            Y: =99
+            ZIndex: =2
 
