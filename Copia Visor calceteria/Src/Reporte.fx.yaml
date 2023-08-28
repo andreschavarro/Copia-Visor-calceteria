@@ -4,7 +4,7 @@ Reporte As screen:
     Width: =1440
 
     "'Contenedor barra navegacion_1' As groupContainer.manualLayoutContainer":
-        Height: =58
+        Height: =60
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -19,7 +19,7 @@ Reporte As screen:
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(66, 75, 90, 1)
             FocusedBorderThickness: =4
-            Height: =58
+            Height: =61
             HoverFill: =
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =1440
