@@ -3,30 +3,40 @@ Reporte As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     Width: =1440
 
-    "'Contenedor barra navegacion_1' As groupContainer.manualLayoutContainer":
+    PowerBI1 As powerbi:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Height: =964
+        TileUrl: |-
+            ="https://app.powerbi.com/view?r=eyJrIjoiMzBhZjRiNWEtMWFiOC00NTQ5LWFmOWQtMGRhODNhMmZjMTc0IiwidCI6IjZhNGViNDYzLTgyYmQtNGEwYi1hZDExLWZmZWJkMmZiNzI4NSIsImMiOjR9"
+        Width: =1440
+        WorkspaceId: ="__my-workspace"
+        Y: =60
+        ZIndex: =2
+
+    "'Contenedor barra navegacion_3' As groupContainer.manualLayoutContainer":
         Height: =60
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Width: =1440
-        ZIndex: =1
+        ZIndex: =3
 
-        "'Naviation Center_1' As rectangle":
+        "'Naviation Center_3' As rectangle":
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(66, 75, 90, 1)
             FocusedBorderThickness: =4
-            Height: =61
+            Height: =60
             HoverFill: =
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =1440
             Y: =
             ZIndex: =1
 
-        Label1_4 As label:
+        Label1_7 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -38,26 +48,12 @@ Reporte As screen:
             FontWeight: =FontWeight.Bold
             Size: =13
             Text: ="VISOR DE ORDENES EN PROCESO"
-            Width: =291
+            Width: =309
             X: =100
             Y: =10
             ZIndex: =2
 
-        Rectangle1_1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =2
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =80
-            X: =1221
-            Y: =48
-            ZIndex: =5
-
-        Image1_1 As image:
+        Image1_3 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -75,11 +71,11 @@ Reporte As screen:
             RadiusTopLeft: =20
             RadiusTopRight: =20
             Width: =40
-            X: =1315
+            X: =1383
             Y: =12
-            ZIndex: =6
+            ZIndex: =3
 
-        Image6_1 As image:
+        Image6_3 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -93,11 +89,37 @@ Reporte As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =60
-            X: =18
-            Y: =1
-            ZIndex: =7
+            ZIndex: =4
 
-        Button5_19 As button:
+        Button5_23 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =
+            OnSelect: =Navigate(Reporte)
+            PressedBorderColor: =
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Reporte"
+            Width: =94
+            X: =1282
+            Y: =15
+            ZIndex: =5
+
+        Button5_18 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -107,10 +129,10 @@ Reporte As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =36
+            Height: =30
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(166, 166, 166, 1)
+            HoverFill: =
             OnSelect: |
                 =Navigate('vista tabla')
             PressedBorderColor: =
@@ -122,22 +144,65 @@ Reporte As screen:
             RadiusTopRight: =0
             Text: ="Vista tabla"
             Width: =119
-            X: =848
-            Y: =13
-            ZIndex: =8
+            X: =836
+            Y: =15
+            ZIndex: =6
 
-        Button5_14 As button:
+        Rectangle1_3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =2
+            HoverFill: =
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =80
+            X: =1290
+            Y: =50
+            ZIndex: =7
+
+        Button5_6 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(66, 75, 90, 1)
+            Fill: =RGBA(0, 0, 0, 0)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
+            Height: =30
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(166, 166, 166, 1)
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({ ShowToolTip: !ShowToolTip })
+            PressedBorderColor: =
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Semaforo"
+            Width: =100
+            X: =953
+            Y: =15
+            ZIndex: =8
+
+        Button5_10 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =
             OnSelect: =Navigate('Pantalla principal')
             PressedBorderColor: =
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -148,46 +213,7 @@ Reporte As screen:
             RadiusTopRight: =0
             Text: ="Visualizador de ordenes"
             Width: =229
-            X: =967
-            Y: =8
+            X: =1053
+            Y: =15
             ZIndex: =9
-
-        Button5_20 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(66, 75, 90, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =36
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(166, 166, 166, 1)
-            OnSelect: =Navigate(Reporte)
-            PressedBorderColor: =
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Text: ="Reporte"
-            Width: =94
-            X: =1208
-            Y: =8
-            ZIndex: =10
-
-    PowerBI1 As powerbi:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Height: =826
-        TileUrl: |-
-            ="https://app.powerbi.com/view?r=eyJrIjoiMzBhZjRiNWEtMWFiOC00NTQ5LWFmOWQtMGRhODNhMmZjMTc0IiwidCI6IjZhNGViNDYzLTgyYmQtNGEwYi1hZDExLWZmZWJkMmZiNzI4NSIsImMiOjR9"
-        Width: =1392
-        WorkspaceId: ="__my-workspace"
-        X: =24
-        Y: =134
-        ZIndex: =2
 
