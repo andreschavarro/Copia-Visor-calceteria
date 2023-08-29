@@ -13,17 +13,13 @@ App As appinfo:
             ContenedorDetalle,
             true
         );
-        ClearCollect(
-            OrdenesColl,
-            SortByColumns(
-                DCVCOrdeness,
-                "cr59d_day_diff",
-                SortOrder.Ascending
-            )
-        );
         Set(valorNegro, First(Filter(semaforo, Color = "Negro")).Num_dias);
         Set(valorRojo, First(Filter(semaforo, Color = "Rojo")).Num_dias);
         Set(valorAmarillo, First(Filter(semaforo, Color = "Amarillo")).Num_dias);
+        Set(valorAmarilloGraficador, First(Filter(semaforo, Color = "Amarillo_Graficador")).Num_dias);
+        Set(valorNegroGraficador, First(Filter(semaforo, Color = "Negro_Graficador")).Num_dias);
+        Set(valorRojoGraficador, First(Filter(semaforo, Color = "Rojo_Graficador")).Num_dias);
+        
         
         
         
