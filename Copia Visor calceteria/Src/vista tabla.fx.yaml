@@ -31,14 +31,14 @@
             =SortByColumns(
                 Filter(
                     DCVCOrdeness,
-                    IsBlank(Var_Desarrollador) || de_desarrollador = Var_Desarrollador,
-                    IsBlank(Var_NumeroOrden) || nu_orden = Var_NumeroOrden,
-                    IsBlank(Var_Recurso) || nom_recurso = Var_Recurso,
-                    IsBlank(Var_Critica) || critica = Var_Critica,
-                    IsBlank(Var_Ejecutiva) || de_ejecutiva = Var_Ejecutiva,
-                    IsBlank(Var_Estilo) || co_ref_exp = Var_Estilo,
-                    IsBlank(Var_Cliente) || de_cliente = Var_Cliente,
-                    IsBlank(Var_Proceso) || centro_proceso = Var_Proceso
+                    IsBlank(Var_Desarrollador2) || de_desarrollador = Var_Desarrollador2,
+                    IsBlank(Var_NumeroOrden2) || nu_orden = Var_NumeroOrden2,
+                    IsBlank(Var_Recurso2) || nom_recurso = Var_Recurso2,
+                    IsBlank(Var_Critica2) || critica = Var_Critica2,
+                    IsBlank(Var_Ejecutiva2) || de_ejecutiva = Var_Ejecutiva2,
+                    IsBlank(Var_Estilo2) || co_ref_exp = Var_Estilo2,
+                    IsBlank(Var_Cliente2) || de_cliente = Var_Cliente2,
+                    IsBlank(Var_Proceso2) || centro_proceso = Var_Proceso2
                 ),
                 "cr59d_day_diff",
                 SortOrder.Ascending
