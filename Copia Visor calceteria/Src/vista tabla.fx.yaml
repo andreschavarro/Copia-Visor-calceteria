@@ -746,11 +746,11 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =92
+            Height: =134
             Size: =20
             Text: ="descargar reporte"
-            Width: =223
-            X: =72
+            Width: =243
+            X: =52
             ZIndex: =1
 
         Button1 As button:
