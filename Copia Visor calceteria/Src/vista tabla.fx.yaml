@@ -182,12 +182,12 @@
             FieldDisplayName: ="DIAS DESDE EL REGISTRO"
             FieldName: ="cr59d_dias_registro"
             FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
+            Height: =716
             LayoutHeight: =Parent.Height
             Order: =12
             Text: =ThisItem.dias_registro
             Width: =211
-            X: =0
+            X: =1191
             Y: =0
             ZIndex: =14
 
