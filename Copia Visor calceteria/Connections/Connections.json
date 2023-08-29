@@ -1,4 +1,46 @@
 {
+  "042fa2f3-ea79-41bf-b35f-3540793fee78": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "6ad397f3-b9bb-493b-b28d-7aa9ef1f6fd5"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "6ad397f3-b9bb-493b-b28d-7aa9ef1f6fd5"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Descagarreportecentrorecurso"
+    ],
+    "dependencies": {
+      "shared_commondataserviceforapps": "7cc1a836-df97-4f48-84b0-77f1d792b90c"
+    },
+    "dependents": [],
+    "id": "042fa2f3-ea79-41bf-b35f-3540793fee78"
+  },
+  "7cc1a836-df97-4f48-84b0-77f1d792b90c": {
+    "connectionRef": {
+      "displayName": "Microsoft Dataverse",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/commondataserviceforapps/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "042fa2f3-ea79-41bf-b35f-3540793fee78"
+    ],
+    "id": "7cc1a836-df97-4f48-84b0-77f1d792b90c"
+  },
   "a949e28a-fdf1-4e28-98eb-ec89dcf8c77c": {
     "connectionRef": {
       "apiTier": "Standard",
