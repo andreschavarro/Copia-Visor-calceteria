@@ -144,7 +144,7 @@ Reporte As screen:
             RadiusTopRight: =0
             Text: ="Vista tabla"
             Width: =119
-            X: =836
+            X: =934
             Y: =15
             ZIndex: =6
 
@@ -161,34 +161,6 @@ Reporte As screen:
             X: =1290
             Y: =50
             ZIndex: =7
-
-        Button5_6 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 0, 0, 0)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =30
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =
-            OnSelect: |-
-                =UpdateContext({ ShowToolTip: !ShowToolTip })
-            PressedBorderColor: =
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Text: ="Semaforo"
-            Width: =100
-            X: =953
-            Y: =15
-            ZIndex: =8
 
         Button5_10 As button:
             BorderColor: =RGBA(0, 0, 0, 0)

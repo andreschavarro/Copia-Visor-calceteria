@@ -413,7 +413,7 @@
             RadiusTopRight: =0
             Text: ="Vista tabla"
             Width: =119
-            X: =836
+            X: =934
             Y: =15
             ZIndex: =6
 
@@ -455,7 +455,7 @@
             RadiusTopRight: =0
             Text: ="Semaforo"
             Width: =100
-            X: =953
+            X: =834
             Y: =15
             ZIndex: =8
 
