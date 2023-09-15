@@ -1455,17 +1455,32 @@
                             )
                         )
                     );
-                    Patch(
-                        DCVCOrdeness,
-                        LookUp(
+                    If(
+                        !IsBlank(DatePicker1_2.SelectedDate),
+                        Patch(
                             DCVCOrdeness,
-                            nu_orden = ThisItem.nu_orden
+                            LookUp(
+                                DCVCOrdeness,
+                                nu_orden = ThisItem.nu_orden
+                            ),
+                            {
+                                fe_final: DatePicker1_2.SelectedDate,
+                                day_diff: varDiasDiff,
+                                critica: varCritica
+                            }
                         ),
-                        {
-                            fe_final: DatePicker1_2.SelectedDate,
-                            day_diff: varDiasDiff,
-                            critica: varCritica
-                        }
+                        Patch(
+                            DCVCOrdeness,
+                            LookUp(
+                                DCVCOrdeness,
+                                nu_orden = ThisItem.nu_orden
+                            ),
+                            {
+                                fe_final: Blank(),
+                                day_diff: Blank(),
+                                critica: Blank()
+                            }
+                        )
                     );
                     Notify(
                         "Fecha actualizada",
