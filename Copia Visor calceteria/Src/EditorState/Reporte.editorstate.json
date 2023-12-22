@@ -120,6 +120,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_10",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -434,6 +435,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_18",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -741,6 +743,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button5_23",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -985,6 +988,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Contenedor barra navegacion_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1208,6 +1212,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image1_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1431,6 +1436,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image6_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1657,6 +1663,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_7",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1920,6 +1927,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Naviation Center_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2088,6 +2096,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PowerBI1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2216,6 +2225,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle1_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2333,6 +2343,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Reporte",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
